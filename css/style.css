@@ -20,6 +20,7 @@ header {
   top: 0;
   right: 0;
   overflow: hidden;
+  box-shadow: 0 0 100px var(--silfenBlue);
 }
 
 /*--------star banner-----*/
@@ -30,7 +31,7 @@ div.banner {
   width: 100%;
   height: 40px;
   display: flex;
-  align-items: center;
+  padding: 5px 0;
 }
 
 .banner a {
@@ -72,6 +73,47 @@ ul.banner li:nth-child(3) {
   }
 }
 /*---------end banner-----------*/
+
+/*------- navigation ------------*/
+.navwrapper {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul.navigation {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.navigation li {
+  list-style: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+ul.navigation a {
+  text-decoration-line: none;
+  font-family: var(--primaryFont);
+  color: black;
+  font-size: 110%;
+}
+.search-cart {
+  width: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-cart img {
+  height: 30px;
+  width: auto;
+}
+
+/*------- end navigation ------------*/
 
 .silfenplay {
   background-color: var(--silfenplayGreen);
