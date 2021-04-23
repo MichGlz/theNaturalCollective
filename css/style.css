@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap");
+
+:root {
+  --silfenBlue: #7bafd4;
+  --silfenplayYellow: #edff00;
+  --silfenplayGreen: #aed5b2;
+  --primaryFont: "Roboto", sans-serif;
+  --secondaryFont: "Manrope", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/*--------star banner-----*/
+
+div.banner {
+  background-color: var(--silfenBlue);
+  font-family: var(--primaryFont);
+  color: white;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+ul.banner {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  list-style: none;
+  font-size: 1.2rem;
+}
+ul.banner li {
+  position: absolute;
+  left: 101vw;
+  width: max-content;
+  animation-name: horizontalMove;
+  animation-duration: 27s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+ul.banner li:nth-child(2) {
+  animation-delay: 9s;
+}
+ul.banner li:nth-child(3) {
+  animation-delay: 16s;
+}
+
+@keyframes horizontalMove {
+  0% {
+    transform: translateX(0vw);
+  }
+
+  100% {
+    transform: translateX(-120vw);
+  }
+}
+/*---------end banner-----------*/
