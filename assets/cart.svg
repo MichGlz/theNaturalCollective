@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.02mm" height="11.16mm" viewBox="0 0 34.08 31.62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #111110;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="cart">
+    <g>
+      <path class="cls-1" d="M14.17,30.62a2,2,0,1,0-2-2A2,2,0,0,0,14.17,30.62Z"/>
+      <path class="cls-1" d="M26.8,30.62a2,2,0,1,0-2-2A2,2,0,0,0,26.8,30.62Z"/>
+      <path class="cls-1" d="M1,1H6.83l3.91,19.53a2.93,2.93,0,0,0,2.92,2.35H27.83a3,3,0,0,0,1.89-.65,2.91,2.91,0,0,0,1-1.7L33.08,8.29H8.29"/>
+    </g>
+  </g>
+</svg>

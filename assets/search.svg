@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="9.17mm" height="9.17mm" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #111110;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="search">
+    <g>
+      <path class="cls-1" d="M11.67,22.33A10.67,10.67,0,1,0,1,11.67,10.66,10.66,0,0,0,11.67,22.33Z"/>
+      <path class="cls-1" d="M25,25l-5.8-5.8"/>
+    </g>
+  </g>
+</svg>
