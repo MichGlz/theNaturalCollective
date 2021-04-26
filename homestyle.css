@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Roboto:ital,wght@0,900;1,900&display=swap");
+
+.hero_img {
+  max-width: 200px;
+}
+
+.intro_text {
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+.intro_text h1 {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.intro_text h2 {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20vw;
+}
+
+.intro_text p {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.home_values {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 4vw;
+  margin-top: 10vw;
+  margin-right: 10vw;
+}
+
+.home_values h3 {
+  font-family: "Roboto";
+}
+
+.home_values img {
+  max-width: 100px;
+  max-height: 80px;
+}
+
+button {
+  background-color: #7bafd4;
+  border: lightblue;
+  border-radius: 2px;
+  margin: 2vw 20vw 0 20vw;
+}
