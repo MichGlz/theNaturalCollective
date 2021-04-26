@@ -14,15 +14,19 @@
   font-family: "Roboto", sans-serif;
 }
 
-.intro_text h2 {
+h2 {
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
-  margin-top: 20vw;
+  margin-top: 5vw;
+  margin-left: 10vw;
+  margin-right: 20vw;
 }
 
-.intro_text p {
+p {
   font-size: 1rem;
   font-family: "Manrope", sans-serif;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 
 .home_values {
@@ -48,4 +52,34 @@ button {
   border: lightblue;
   border-radius: 2px;
   margin: 2vw 20vw 0 20vw;
+  width: 170px;
+  height: 55px;
+}
+
+.button_play {
+  background-color: #aed582;
+}
+
+.front_play {
+  margin-top: 10vw;
+  background-color: #edff00;
+}
+
+.front_play img {
+  max-width: 200px;
+  max-height: 300px;
+}
+
+.front_play h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.front_play p {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.bestsellers img {
+  max-width: 200px;
+  max-height: 300px;
 }
