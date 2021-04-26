@@ -84,8 +84,12 @@ ul.banner li:nth-child(3) {
   justify-content: space-between;
 }
 
-ul.navigation {
+.navwrapper nav {
   width: 50%;
+}
+
+ul.navigation {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
