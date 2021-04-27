@@ -4,12 +4,12 @@
   max-width: 200px;
 }
 
-.intro_text {
+.hero_text {
   margin-left: 20vw;
   margin-right: 20vw;
 }
 
-.intro_text h1 {
+.hero_text h1 {
   font-size: 4rem;
   font-family: "Roboto", sans-serif;
 }
@@ -34,6 +34,7 @@ p {
   column-gap: 4vw;
   margin-top: 10vw;
   margin-right: 10vw;
+  margin-left: 10vw;
 }
 
 h3 {
@@ -58,12 +59,12 @@ button {
   background-color: #aed582;
 }
 
-.front_play {
+.play_wrapper {
   margin-top: 10vw;
-  background-color: #edff00;
+  background-color: #eeff0036;
 }
 
-.front_play img {
+.play_wrapper img {
   max-width: 200px;
   max-height: 300px;
 }
@@ -77,7 +78,7 @@ button {
   font-family: "Manrope", sans-serif;
 }
 
-.bestsellers img {
+.bestseller_wrapper img {
   max-width: 200px;
   max-height: 300px;
 }
@@ -112,4 +113,11 @@ button {
 .igfeed img {
   max-width: 100px;
   max-height: 100px;
+}
+
+/*.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
