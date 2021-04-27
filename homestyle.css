@@ -88,6 +88,8 @@ p {
 
 h3 {
   font-family: "Roboto";
+  margin-top: 4vw;
+  margin-bottom: 2vw;
 }
 
 .home_values img {
@@ -99,9 +101,10 @@ button {
   background-color: #7bafd4;
   border: lightblue;
   border-radius: 2px;
-  margin: 2vw 20vw 0 20vw;
   width: 170px;
   height: 55px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .button_play {
@@ -111,20 +114,41 @@ button {
 .play_wrapper {
   margin-top: 10vw;
   background-color: #eeff0036;
+  position: relative;
+  z-index: -1;
+  height: 80vh;
+  width: 100%;
+  margin-bottom: 20%;
+}
+
+.shoes {
+  position: absolute;
+  top: 8vw;
+  left: 40%;
+  z-index: -2;
+}
+
+.clothes {
+  position: absolute;
+  top: 12vw;
+  left: 60%;
+  z-index: -2;
 }
 
 .play_wrapper img {
-  max-width: 200px;
-  max-height: 300px;
+  max-width: 40%;
+  height: auto;
 }
 
-.front_play h2 {
-  font-family: "Roboto", sans-serif;
+.play_text {
+  margin-left: 10vw;
+  margin-right: 20vw;
+  padding-top: 2vw;
+  max-width: 45ch;
 }
 
-.front_play p {
-  font-size: 1rem;
-  font-family: "Manrope", sans-serif;
+.play_text h2 {
+  margin-left: 0;
 }
 
 .bestseller_wrapper img {
@@ -164,9 +188,11 @@ button {
   max-height: 100px;
 }
 
-/*.center {
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 120px;
 }
