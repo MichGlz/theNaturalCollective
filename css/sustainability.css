@@ -1,0 +1,98 @@
+main {
+  margin-top: 50px;
+}
+
+h2 {
+  font-family: var(--primaryFont);
+  font-size: 3rem;
+}
+h3 {
+  font-family: var(--primaryFont);
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-family: var(--primaryFont);
+}
+
+p {
+  font-family: var(--secondaryFont);
+  max-width: 300px;
+}
+
+.intro_p {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.intro {
+  margin: auto;
+  max-width: 600px;
+}
+
+.intro_h2 {
+  text-align: center;
+}
+
+.principles {
+  margin: 100px;
+  margin-top: 150px;
+}
+
+.principles_h3 {
+  margin-left: 150px;
+}
+
+.principles_svg {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 100%;
+}
+.recycled_h2 {
+  margin-left: 200px;
+}
+
+.recycled_bags {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 40px;
+}
+
+.recycled {
+  box-shadow: grey 0px 0px 4px 0px;
+  padding: 30px;
+}
+
+.recycled_img {
+  max-width: 95%;
+}
+
+.recycled_name {
+  font-weight: bolder;
+}
+
+.recycled_text {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+.recycled_button {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: var(--silfenBlue);
+  border: 2px solid outset;
+  border-color: var(--silfenBlue);
+}
+
+.recycled_button a {
+  color: white;
+  font-family: var(--primaryFont);
+  font-size: 1.3rem;
+  text-decoration: none;
+}

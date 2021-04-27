@@ -144,6 +144,7 @@ footer {
 footer a {
   text-decoration: none;
   color: black;
+  text-transform: initial;
 }
 
 footer nav {
