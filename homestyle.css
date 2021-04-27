@@ -1,12 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Roboto:ital,wght@0,900;1,900&display=swap");
 
+.hero_wrapper {
+  margin-top: 200px;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+/*girl with flower*/
+.hero1 {
+  position: absolute;
+  top: 40%;
+  left: 0px;
+  z-index: -2;
+}
+
+/*palmtree*/
+.hero2 {
+  position: absolute;
+  top: 5%;
+  left: 10vw;
+  z-index: -2;
+}
+
+/*girl profile with bag*/
+.hero3 {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  z-index: -2;
+}
+
+/*lying down with bag*/
+.hero4 {
+  position: absolute;
+  right: 20vw;
+  z-index: -2;
+}
+
+/*water*/
+.hero5 {
+  position: absolute;
+  top: 80%;
+  right: 10vw;
+  z-index: -2;
+}
+
 .hero_img {
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .hero_text {
   margin-left: 20vw;
   margin-right: 20vw;
+  padding: 15vw;
 }
 
 .hero_text h1 {
