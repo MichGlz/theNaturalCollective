@@ -205,14 +205,45 @@ button {
   margin: 2vw;
 }
 
-.story_home {
+.story_wrapper {
   margin-top: 10vw;
   background-color: #c0def5;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 8%;
 }
 
-.story_home img {
+.story_bag {
+  position: absolute;
+  top: 8vw;
+  right: 8vw;
+  z-index: -2;
+}
+
+.story_flower {
+  position: absolute;
+  top: 15vw;
+  right: 20vw;
+  z-index: -2;
+}
+
+.story_wrapper img {
   max-width: 200px;
-  max-height: 300px;
+  height: auto;
+}
+
+.story_text {
+  margin-left: 10vw;
+  margin-right: 20vw;
+  padding-top: 2vw;
+  max-width: 45ch;
+  color: #7bafd4;
+}
+
+.story_text h2 {
+  margin-left: 0;
 }
 
 .arrivals_home img {
