@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap");
+
+:root {
+  --silfenBlue: #7bafd4;
+  --silfenplayYellow: #edff00;
+  --silfenplayGreen: #aed5b2;
+  --primaryFont: "Roboto", sans-serif;
+  --secondaryFont: "Manrope", sans-serif;
+  --path: path("M3.6,275.3c0,0-42.3-126.8,163.8-198.2s321.1,135.9,332.9,166.5");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 115px;
+  padding-left: 20vw;
+}
+
+h2,
+h1 {
+  font-family: var(--secondaryFont);
+}
+
+/*--------filter-------*/
+aside {
+  height: 90vh;
+  width: 20vw;
+  position: fixed;
+  top: 115px;
+  left: 0;
+  padding: 2rem;
+}
+
+.filter > div {
+  border-bottom: solid 2px black;
+}
+
+.filter > h2:first-child {
+  font-size: 2rem;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: grey;
+  margin-left: 1vw;
+}
+
+.colours {
+  overflow-y: hidden;
+  height: 300px;
+}
+
+#colorsFilter {
+  margin-top: 1rem;
+  column-count: 2;
+  top: 0;
+
+  /* transform: translateY(-100%); */
+}
+
+.colorForm {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: var(--primaryFont);
+  position: relative;
+  text-align: left;
+  margin-left: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s linear;
+}
+
+.colorForm::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: -30px;
+  border: solid 1px black;
+  transition: 0.2s linear;
+}
+
+input[type="radio"]:checked + label {
+  background: #7bafd475;
+}
+
+input[type="radio"]:checked + label::before {
+  border: solid 2px black;
+  border-radius: 50%;
+}
+
+label[for="black"]::before {
+  background: black;
+}
+label[for="blue"]::before {
+  background: blue;
+}
+label[for="brown"]::before {
+  background: brown;
+}
+label[for="pink"]::before {
+  background: pink;
+}
+label[for="turquoise"]::before {
+  background: turquoise;
+}
+label[for="yellow"]::before {
+  background: yellow;
+}
+label[for="champagne"]::before {
+  background: rgb(238, 238, 196);
+}
+label[for="watergreen"]::before {
+  background: rgb(7, 230, 144);
+}
+label[for="grey"]::before {
+  background: grey;
+}
+label[for="silver"]::before {
+  background: silver;
+}
+label[for="green"]::before {
+  background: green;
+}
+
+#colorsFilter input {
+  display: none;
+}
+
+/*--------end filter----------*/
+
+.productListContainer {
+  width: min(1600px, 80vw);
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  gap: 2rem;
+  padding-bottom: max(3vw, 5vh);
+  padding-top: max(3vw, 5vh);
+}
+
+.smallCardContainer {
+  position: relative;
+  width: 100%;
+}
+
+.smallCard {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+
+  background-color: white;
+  box-shadow: 5px 10px 15px rgba(110, 109, 109, 0.308);
+  font-family: var(--secondaryFont);
+  text-align: left;
+}
+
+.smallCard p {
+  font-size: 120%;
+}
+
+.smallCard h2 {
+  font-size: 1.2rem;
+}
+
+.prevPrice {
+  text-decoration-line: line-through;
+  opacity: 0.5;
+  margin-right: 2rem;
+}
+
+.imageContainer {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+
+div.saleIcon {
+  position: absolute;
+  width: 4.5rem;
+  height: 4.5rem;
+  top: 1vw;
+  left: 1vw;
+  background-color: rgba(205, 233, 255, 0.356);
+  border: solid 2px rgb(250, 84, 84);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--secondaryFont);
+  color: rgb(250, 84, 84);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.saleIcon.visible {
+  opacity: 1;
+}
+
+a.linkProduct {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+  transform-origin: bottom;
+}
+
+a.linkProduct:hover {
+  background: #7bafd445;
+  box-shadow: 5px 10px 25px rgba(110, 109, 109, 0.308);
+}
+
+/*-------------path animation----------*/
+/* .locura {
+  height: 100vh;
+  width: 100%;
+}
+
+.item {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  offset-path: path(
+    "M3.6,275.3c0,0-42.3-126.8,163.8-198.2s321.1,135.9,332.9,166.5c11.8,30.5,92.8,96.8,182.3,42.3C936.9,78.1,931-7.4,1005,0.5s443.9,116.3,325,356.7s-241.1,399-673.8,404.3S13.8,321.2,3.6,275.3z"
+  );
+}
+
+.pos1 {
+  offset-distance: 15%;
+}
+
+.pos2 {
+  offset-distance: 50%;
+}
+
+.pos3 {
+  offset-distance: 65%;
+  animation: arround 5s linear infinite;
+}
+.pos4 {
+  offset-distance: 60%;
+}
+
+@keyframes arround {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#svgCrazy {
+  width: 100vw;
+  height: 100vh;
+} */

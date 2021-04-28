@@ -20,8 +20,9 @@ header {
   top: 0;
   right: 0;
   overflow: hidden;
-  box-shadow: 0 0 100px var(--silfenBlue);
+  /* box-shadow: 0 0 100px var(--silfenBlue); */
   background-color: white;
+  z-index: 5;
 }
 
 /*--------star banner-----*/

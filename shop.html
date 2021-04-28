@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SILFEN</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/shop.css">
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   </head>
   <body>
@@ -34,10 +35,90 @@
         </div>
       </div>
       </header>
+      <aside>
+        <div class="filter">
+          <h2>FILTERS</h2>
+          <div class="colorsWraper">
+            <h2 class="btnColours">COLOURS<span class="arrow">&#8679</span></h2>
+          <div class="colours">
+            
+            <form action="" id="colorsFilter">
+              
+                <input type="radio" id="allColors" name="color" value="all" checked="checked">
+                <label class="colorForm" for="allColors" > All </label>
+            
+                <input type="radio" id="black" name="color" value="Black">
+                <label class="colorForm" for="black">Black</label>
+            
+                <input type="radio" id="blue" name="color" value="Blue">
+                <label class="colorForm" for="blue">Blue</label>
+              
+                <input type="radio" id="brown" name="color" value="Brown">
+                <label class="colorForm" for="brown">Brown</label>
+                
+                <input type="radio" id="pink" name="color" value="Pink">
+                <label class="colorForm" for="pink">Pink</label>
+                  
+                <input type="radio" id="turquoise" name="color" value="Turquoise">
+                <label class="colorForm" for="turquoise">Turquoise</label>
+                    
+                <input type="radio" id="yellow" name="color" value="Yellow">
+                <label class="colorForm" for="yellow">Yellow</label>
+
+                <input type="radio" id="champagne" name="color" value="Champagne">
+                <label class="colorForm" for="champagne">Champagne</label>
+                        
+                <input type="radio" id="watergreen" name="color" value="Watergreen">
+                <label class="colorForm" for="watergreen">Watergreen</label>
+                          
+                <input type="radio" id="grey" name="color" value="Grey">
+                <label class="colorForm" for="grey">Grey</label>
+                            
+                <input type="radio" id="silver" name="color" value="Silver">
+                <label class="colorForm" for="silver">Silver</label>
+
+                <input type="radio" id="green" name="color" value="Green">
+                <label class="colorForm" for="green">Green</label>    
+            </form>
+          </div>
+          </div>
+          <div class="type">
+            <h2>TYPE</h2>
+          </div>
+          <div class="collections">
+            <h2>COLLECTIONS</h2>
+          </div>
+
+        </div>
+      </aside>
+      
+      Balck, Blue, Brown, Pink, Turquoise, Yellow, Champagne, Whatergreen, Grey, Silver, Green 
       <main>
-        
+        <h1>SHOP</h1>
+        <div class="productListContainer">
+
+        </div>
+       
       </main>
+    
       <footer></footer>
     </div>
+      <template class="productSmallCard">
+        <div class="smallCardContainer">
+        <a class="linkProduct" href=""></a>
+          <section class="smallCard">
+              <div class="saleIcon"><h3>SALE</h3></div>
+              <div class="imageContainer"><img src="" alt="" loading="lazy"></div>
+              <div class="recycledIcon"></div>
+              <h2 class="productName"></h2>
+              <p class="price"></p>
+           </section>
+        </div>
+      </template>
+
+
+    
+    <script src="js/shop.js"></script>
   </body>
 </html>
+
