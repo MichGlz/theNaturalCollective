@@ -73,6 +73,9 @@ function showProductList(products) {
       ).innerHTML = `<span class="prevPrice">${product.price} kr.</span> ${newPrice} kr.`;
       copy.querySelector(".saleIcon").classList.add("visible");
     }
+    if (product.recycled) {
+      copy.querySelector(".recycledIcon").classList.add("visible");
+    }
     copy.querySelector("a").href = `product.html?product=${product._id}`;
 
     copy.querySelector("img").src = product.image_url;

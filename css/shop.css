@@ -60,7 +60,7 @@ aside {
   /* transform: translateY(-100%); */
 }
 
-.colorForm {
+.colorFormLabel {
   display: block;
   margin-bottom: 1rem;
   font-family: var(--primaryFont);
@@ -70,9 +70,10 @@ aside {
   padding: 5px 10px;
   border-radius: 5px;
   transition: 0.3s linear;
+  cursor: pointer;
 }
 
-.colorForm::before {
+.colorFormLabel::before {
   content: "";
   height: 20px;
   width: 20px;
@@ -132,7 +133,7 @@ label[for="green"]::before {
 /*--------end filter----------*/
 
 .productListContainer {
-  width: min(1600px, 80vw);
+  width: min(1600px, 70vw);
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -151,11 +152,12 @@ label[for="green"]::before {
   width: 100%;
   height: auto;
   padding: 2rem;
-
   background-color: white;
   box-shadow: 5px 10px 15px rgba(110, 109, 109, 0.308);
   font-family: var(--secondaryFont);
   text-align: left;
+  transition: 0.2s;
+  transform-origin: center;
 }
 
 .smallCard p {
@@ -181,7 +183,7 @@ label[for="green"]::before {
   width: 100%;
 }
 
-div.saleIcon {
+.saleIcon {
   position: absolute;
   width: 4.5rem;
   height: 4.5rem;
@@ -200,23 +202,46 @@ div.saleIcon {
   pointer-events: none;
 }
 
+.recycledIcon {
+  position: absolute;
+  width: 4.5rem;
+  height: 4.5rem;
+  bottom: -10px;
+  right: -10px;
+  background: url(../assets/certificateStamp.jpg);
+  background-size: contain;
+  border: solid 2px var(--silfenBlue);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .saleIcon.visible {
   opacity: 1;
 }
+.recycledIcon.visible {
+  opacity: 1;
+}
 
-a.linkProduct {
+.linkProduct {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   transition: 0.5s;
-  transform-origin: bottom;
+  transform-origin: center;
 }
 
-a.linkProduct:hover {
+.linkProduct:hover {
   background: #7bafd445;
   box-shadow: 5px 10px 25px rgba(110, 109, 109, 0.308);
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.linkProduct:hover + .smallCard {
+  transform: scale(1.1);
 }
 
 /*-------------path animation----------*/
