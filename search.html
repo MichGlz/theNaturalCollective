@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SILFEN</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/search.css"/>
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   </head>
   <body>
@@ -23,7 +23,7 @@
         <div class="logo"><a href="index.html"><img src="assets/silfen_logo.svg" alt="logo"></a> </div>
         <nav>
           <ul class="navigation">
-            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="shop.html?all=true">SHOP</a></li>
             <li><a href="">OUR STORY</a></li>
             <li><a class="dinamicBrand" href="">SUSTAINABILITY</a></li>
             <li><a href="">SILFENPLAY</a></li>
@@ -36,6 +36,15 @@
       </div>
       </header>
       <main>
+        <form action="#" method="get" role="search"><input type="text" name="query" placeholder="Search silfen.dk" required><button type="submit">Submit</button></form>
+        <div class="search">
+          <input type="search" placeholder="search..." />
+        </div>
+        <template>
+          <h2 class="name"></h2>
+          <h3></h3>
+        </template>
+        <section></section>
        
       </main>
     
@@ -45,7 +54,7 @@
 
 
     
-    <script src="js/shop.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>
 

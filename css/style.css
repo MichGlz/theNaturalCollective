@@ -42,11 +42,16 @@ div.banner {
 
 ul.banner {
   width: 100%;
-  height: 50%;
+  height: 100%;
   position: relative;
   list-style: none;
   font-size: 1.2rem;
 }
+
+ul.banner:hover li {
+  animation-play-state: paused;
+}
+
 ul.banner li {
   position: absolute;
   left: 101vw;
@@ -129,4 +134,17 @@ ul.navigation a {
 
 .silfen {
   background-color: var(--silfenBlue);
+}
+
+input[type="search"] {
+  width: 30vw;
+  height: 3vw;
+  border: solid 2px var(--silfenBlue);
+  border-radius: 1.5vw;
+  padding: 0 3rem;
+  font-size: 1.5rem;
+}
+/*-------------search------------*/
+.red {
+  color: red;
 }

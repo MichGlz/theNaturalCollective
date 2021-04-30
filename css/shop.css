@@ -13,9 +13,15 @@
   box-sizing: border-box;
 }
 
+body.shop,
+body.productSilfen {
+  background: url(/assets/silfen_s_frame.svg);
+  background-size: 200px;
+  background-attachment: fixed;
+}
+
 main {
-  padding-top: 115px;
-  padding-left: 20vw;
+  grid-area: main;
 }
 
 h2,
@@ -23,13 +29,19 @@ h1 {
   font-family: var(--secondaryFont);
 }
 
+.main-asideWrapper {
+  margin-top: 140px;
+  display: grid;
+  grid-template-areas: "aside main";
+  grid-template-columns: 1fr 4fr;
+  background-color: rgba(255, 255, 255, 0);
+}
+
 /*--------filter-------*/
 aside {
+  grid-area: aside;
   height: 90vh;
   width: 20vw;
-  position: fixed;
-  top: 115px;
-  left: 0;
   padding: 2rem;
 }
 
@@ -60,7 +72,7 @@ aside {
   /* transform: translateY(-100%); */
 }
 
-.colorFormLabel {
+label {
   display: block;
   margin-bottom: 1rem;
   font-family: var(--primaryFont);
@@ -73,7 +85,7 @@ aside {
   cursor: pointer;
 }
 
-.colorFormLabel::before {
+label::before {
   content: "";
   height: 20px;
   width: 20px;
@@ -83,7 +95,7 @@ aside {
   transition: 0.2s linear;
 }
 
-input[type="radio"]:checked + label {
+input:checked + label {
   background: #7bafd475;
 }
 
@@ -91,46 +103,105 @@ input[type="radio"]:checked + label::before {
   border: solid 2px black;
   border-radius: 50%;
 }
+input[type="checkbox"]:checked + label::before {
+  height: 15px;
+  width: 15px;
+  background: black;
+  border-radius: 50%;
+}
 
-label[for="black"]::before {
+label[for="black"]::before,
+.Black {
   background: black;
 }
-label[for="blue"]::before {
+
+label[for="blue"]::before,
+.Blue {
   background: blue;
 }
-label[for="brown"]::before {
+label[for="brown"]::before,
+.Brown {
   background: brown;
 }
-label[for="pink"]::before {
+label[for="pink"]::before,
+.Pink {
   background: pink;
 }
-label[for="turquoise"]::before {
+label[for="turquoise"]::before,
+.Turquoise {
   background: turquoise;
 }
-label[for="yellow"]::before {
+label[for="yellow"]::before,
+.Yellow {
   background: yellow;
 }
-label[for="champagne"]::before {
+label[for="champagne"]::before,
+.Champagne {
   background: rgb(238, 238, 196);
 }
-label[for="watergreen"]::before {
+label[for="watergreen"]::before,
+.Watergreen {
   background: rgb(7, 230, 144);
 }
-label[for="grey"]::before {
+label[for="grey"]::before,
+.Grey {
   background: grey;
 }
-label[for="silver"]::before {
+label[for="silver"]::before,
+.Silver {
   background: silver;
 }
-label[for="green"]::before {
+label[for="green"]::before,
+.Green {
   background: green;
 }
 
-#colorsFilter input {
+input {
   display: none;
 }
 
+.types,
+.collections {
+  padding: 1rem 0;
+}
+
+#typeFilter {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primaryFont);
+  font-size: 1.2rem;
+}
+
+#typeFilter * + * {
+  margin-top: 1rem;
+}
+
+#collectionFilter {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primaryFont);
+  font-size: 1.2rem;
+}
+
+#collectionFilter * + * {
+  margin-top: 1rem;
+}
+
+.collectionsWrapper,
+.typesWrapper {
+  padding-top: 1rem;
+}
+.colorsWrapper {
+  padding-top: 2rem;
+}
+
 /*--------end filter----------*/
+
+.filterName {
+  margin-top: 2rem;
+  margin-left: 6rem;
+  font-size: 2.5rem;
+}
 
 .productListContainer {
   width: min(1600px, 70vw);
@@ -206,14 +277,18 @@ label[for="green"]::before {
   position: absolute;
   width: 4.5rem;
   height: 4.5rem;
-  bottom: -10px;
-  right: -10px;
+
   background: url(../assets/certificateStamp.jpg);
   background-size: contain;
   border: solid 2px var(--silfenBlue);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
+}
+
+.shop .recycledIcon {
+  bottom: -10px;
+  right: -10px;
 }
 
 .saleIcon.visible {
@@ -244,6 +319,189 @@ label[for="green"]::before {
   transform: scale(1.1);
 }
 
+/*----------product.page---------------*/
+
+main.productSilfen {
+  padding-top: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bigCard {
+  width: 100%;
+  padding-bottom: max(5vw, 5vh);
+  border-bottom: solid 1px black;
+}
+.image-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-saleIcon {
+  width: 60%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+}
+
+.imageContainerBig {
+  display: flex;
+  width: 100%;
+}
+
+.imageContainerBig img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.infoWrapper {
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.infoWrapper > * + * {
+  margin-top: 2rem;
+}
+
+.bigCard h2 {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+
+.productSilfen .recycledIcon {
+  top: 0;
+  right: 10px;
+}
+
+p.description,
+.bigCard .price {
+  max-width: 40ch;
+  font-family: var(--secondaryFont);
+  font-size: 1.3rem;
+}
+
+.colorsList {
+  display: flex;
+  align-items: center;
+}
+
+.colorsList > * + * {
+  margin-left: 1rem;
+}
+
+.colorsList div {
+  height: 20px;
+  width: 20px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+.colorsList h3 {
+  font-family: var(--secondaryFont);
+  font-weight: lighter;
+}
+
+div.selected {
+  transform-origin: center;
+  transform: scale(1.2);
+  border: solid 1px transparent;
+  box-shadow: 0 0 0 1px white, 0 0 0 3px black;
+}
+#addToCart {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--silfenBlue);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.sideBtn {
+  height: 100%;
+  width: 10%;
+  background: #7bafd418;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.sideBtn.right {
+  background-image: url(../assets/right.svg);
+}
+.sideBtn.left {
+  background-image: url(../assets/left.svg);
+}
+
+.sideBtn:hover {
+  background: #96b5cc36;
+}
+
+.productSilfen .productListContainer {
+  margin-top: 0;
+  padding-top: max(2vw, 2vh);
+}
+
+.productSilfen .productListContainer > * {
+  transform: scale(0.6);
+}
+
+.containerMiniPics {
+  margin-top: max(5vw, 5vh);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.miniPic {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.miniPic img {
+  position: absolute;
+  width: 250%;
+  height: auto;
+}
+.miniPic:nth-child(1) img {
+  width: 100%;
+  opacity: 0.5;
+}
+.miniPic:nth-child(3) img {
+  bottom: -80px;
+  left: -70px;
+}
+
+.miniPic:nth-child(2) img {
+  bottom: 0;
+  right: -70px;
+  width: 180%;
+}
+
+.miniPic:nth-child(4) img {
+  bottom: 0;
+  right: -90px;
+  width: 300%;
+}
+.btnBack {
+  position: fixed;
+  left: 3rem;
+  top: 180px;
+  font-size: 1.5rem;
+  font-family: var(--secondaryFont);
+  color: black;
+  text-decoration-line: none;
+}
+
+.btnBack:hover {
+  font-weight: lighter;
+  font-size: 1.3rem;
+}
 /*-------------path animation----------*/
 /* .locura {
   height: 100vh;
@@ -289,4 +547,4 @@ label[for="green"]::before {
 #svgCrazy {
   width: 100vw;
   height: 100vh;
-} */
+} */ ;

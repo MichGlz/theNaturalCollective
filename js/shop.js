@@ -1,16 +1,50 @@
 const urlParams = new URLSearchParams(window.location.search);
-window.addEventListener("load", fetchProductList);
+
+const typeBag = urlParams.get("type");
+const colorBag = urlParams.get("color");
+const collectionBag = urlParams.get("collection");
+let allBags = urlParams.get("all");
 
 let newPrice;
 let endPoint;
+let urlFetch;
+
+let titles = [typeBag, colorBag, collectionBag];
+let inputValue = titles.join("");
+let headerShop = inputValue.toUpperCase();
+
+if (allBags == "true") {
+  urlFetch = `https://kea21spring-0a0d.restdb.io/rest/silfenproducts`;
+  console.log(allBags);
+  inputValue = "all";
+  headerShop = "SHOP";
+} else {
+  urlFetch = `https://kea21spring-0a0d.restdb.io/rest/silfenproducts?q={"$or": [{"type": "${typeBag}"}, {"color": "${colorBag}"}, {"collection": "${collectionBag}"}]}`;
+}
+
+document.querySelector(".filterName").textContent = headerShop;
+document
+  .querySelector(`input[value="${inputValue}"]`)
+  .setAttribute("checked", "checked");
+console.log(inputValue);
+
+window.addEventListener("load", fetchProductList);
+
+console.log(titles);
 
 document.querySelector("#black").value;
 document
   .querySelector("#colorsFilter")
   .addEventListener("change", fetchProductFilter);
+document
+  .querySelector("#typeFilter")
+  .addEventListener("change", fetchProductFilter);
+document
+  .querySelector("#collectionFilter")
+  .addEventListener("change", fetchProductFilter);
 
 function fetchProductList() {
-  fetch(`https://kea21spring-0a0d.restdb.io/rest/silfenproducts`, {
+  fetch(urlFetch, {
     method: "GET",
     headers: {
       "x-apikey": "60534ad0ff8b0c1fbbc28be2",
@@ -27,31 +61,15 @@ function fetchProductList() {
 }
 
 function fetchProductFilter(e) {
-  document.querySelectorAll(".smallCardContainer").forEach((card) => {
-    console.log("hola");
-    card.remove();
-  });
   console.log(e.originalTarget.value);
   const color = e.originalTarget.value;
+  const name = e.originalTarget.name;
   if (color == "all") {
-    fetchProductList();
+    location.href = `shop.html?all=true`;
     return;
   }
-  endPoint = `?q={"color": "${color}"}`;
-  fetch(`https://kea21spring-0a0d.restdb.io/rest/silfenproducts${endPoint}`, {
-    method: "GET",
-    headers: {
-      "x-apikey": "60534ad0ff8b0c1fbbc28be2",
-    },
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      console.log(response);
-      showProductList(response);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+
+  location.href = `shop.html?${name}=${color}`;
 }
 
 function showProductList(products) {
@@ -83,55 +101,5 @@ function showProductList(products) {
 
     //append
     document.querySelector(".productListContainer").appendChild(copy);
-  });
-}
-
-/*-------------------fade in aprove post---------------------*/
-function approveArticle() {
-  console.log("approve");
-  fetch(`https://reicpe-9cc2.restdb.io/rest/posts/${articleId}`, {
-    method: "PATCH",
-    headers: {
-      "x-apikey": "606d5dcef5535004310074f4",
-      "Content-Type": "application/json",
-    },
-    body: '{"approved":true}',
-  })
-    .then((response) => {
-      // console.log(response);
-      window.open("index.html", "_self");
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-}
-//-------------- fade in -------------------
-
-const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -150px 0px",
-};
-
-const appearOnScroll = new IntersectionObserver(function (
-  entries,
-  appearOnScroll
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      console.log("hola");
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-},
-appearOptions);
-
-function faderMachine() {
-  faders = document.querySelectorAll(".fade-in");
-  console.log("fade-in");
-  faders.forEach((fader) => {
-    appearOnScroll.observe(fader);
   });
 }
