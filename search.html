@@ -36,21 +36,39 @@
       </div>
       </header>
       <main>
-        <form action="#" method="get" role="search"><input type="text" name="query" placeholder="Search silfen.dk" required><button type="submit">Submit</button></form>
-        <div class="search">
-          <input type="search" placeholder="search..." />
-        </div>
-        <template>
-          <h2 class="name"></h2>
-          <h3></h3>
-        </template>
-        <section></section>
+       
+        <form action="#" method="get" role="search" class="search">
+        
+          <input type="search" name="query" placeholder="search..." />
+          <button class="btnSearch" type="submit"></button>
+          <div ></div>
+        </form>
+        
+        <section class="matchList">
+ 
+        </section>
        
       </main>
-    
+      
       <footer></footer>
     </div>
-      
+    <div class="message displaySMS">
+      <p></p>
+    </div>
+   
+    <template id="productmatch">
+      <article class="productMatch">
+        <a class="linkProduct" href="" > </a>
+          <div class="productmatchImg">
+          <img src="" alt="" >
+        </div>
+        <div class="infoProductMatch">
+        <h2 class="productName"></h2>
+        <p class="price"></p>
+        <p class="description"></p>
+      </div>
+      </article>
+    </template>
 
 
     

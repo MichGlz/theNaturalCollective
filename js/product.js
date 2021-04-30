@@ -27,9 +27,10 @@ function showProduct(product) {
   document.querySelector(".price").textContent = `${product.price} kr.`;
   if (product.sale) {
     newPrice = Math.floor(product.price * ((100 - product.discount) / 100));
+    let youSave = product.price - newPrice;
     document.querySelector(
       ".price"
-    ).innerHTML = `<span class="prevPrice">${product.price} kr.</span> ${newPrice} kr.`;
+    ).innerHTML = `<span class="prevPrice">${product.price} kr.</span><span class="newPrice">${newPrice} kr.</span><span class="youSave"> you save ${youSave} kr.</span>`;
     document.querySelector(".saleIcon").classList.add("visible");
   }
   if (product.recycled) {
@@ -97,6 +98,7 @@ function showProductList(products) {
     copy.querySelector(".price").textContent = `${product.price} kr.`;
     if (product.sale) {
       newPrice = Math.floor(product.price * ((100 - product.discount) / 100));
+
       copy.querySelector(
         ".price"
       ).innerHTML = `<span class="prevPrice">${product.price} kr.</span> ${newPrice} kr.`;

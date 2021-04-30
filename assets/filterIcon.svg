@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10mm" height="10mm" viewBox="0 0 28.35 28.35">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+        stroke-width: 2.62px;
+      }
+
+      .cls-3 {
+        fill: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <g id="search">
+    <g>
+      <rect class="cls-1" width="28.35" height="28.35"/>
+      <g>
+        <g>
+          <line class="cls-2" x1="2.83" y1="14.17" x2="25.51" y2="14.17"/>
+          <path class="cls-3" d="M20.85,18a3.69,3.69,0,0,0,3.6-3.78,3.61,3.61,0,1,0-7.21,0A3.69,3.69,0,0,0,20.85,18Z"/>
+        </g>
+        <g>
+          <line class="cls-2" x1="2.83" y1="6.61" x2="25.51" y2="6.61"/>
+          <path class="cls-3" d="M7.68,10.39a3.69,3.69,0,0,0,3.61-3.78A3.7,3.7,0,0,0,7.68,2.83a3.7,3.7,0,0,0-3.6,3.78A3.69,3.69,0,0,0,7.68,10.39Z"/>
+        </g>
+        <g>
+          <line class="cls-2" x1="2.83" y1="21.73" x2="25.51" y2="21.73"/>
+          <path class="cls-3" d="M7.68,25.51a3.78,3.78,0,0,0,0-7.56,3.78,3.78,0,0,0,0,7.56Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

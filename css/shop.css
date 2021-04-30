@@ -51,6 +51,7 @@ aside {
 
 .filter > h2:first-child {
   font-size: 2rem;
+  font-weight: lighter;
 }
 
 .arrow {
@@ -201,6 +202,7 @@ input {
   margin-top: 2rem;
   margin-left: 6rem;
   font-size: 2.5rem;
+  font-weight: lighter;
 }
 
 .productListContainer {
@@ -243,6 +245,15 @@ input {
   text-decoration-line: line-through;
   opacity: 0.5;
   margin-right: 2rem;
+}
+
+.youSave {
+  margin-left: 2rem;
+  color: crimson;
+}
+
+.newPrice {
+  font-size: 1.6rem;
 }
 
 .imageContainer {
@@ -340,10 +351,10 @@ main.productSilfen {
 }
 
 .image-saleIcon {
-  width: 60%;
-  max-width: 600px;
+  width: min(100vw, 600px);
   height: auto;
   display: flex;
+  position: relative;
 }
 
 .imageContainerBig {
@@ -501,6 +512,61 @@ div.selected {
 .btnBack:hover {
   font-weight: lighter;
   font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .main-asideWrapper {
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+  }
+  aside {
+    width: 0%;
+    height: inherit;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    background-image: url(/assets/silfen_s_frame.svg);
+    background-size: 100px;
+    background-attachment: fixed;
+  }
+  div.filter {
+    padding: 1rem;
+  }
+
+  .filterName {
+    margin-left: 0;
+    text-align: center;
+  }
+  .outerContainerMiniPics {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .containerMiniPics {
+    margin-top: max(5vw, 5vh);
+    display: flex;
+    width: calc(800px + 3rem);
+    gap: 1rem;
+  }
+  .miniPic {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .outerContainerMiniPics {
+    justify-content: left;
+    overflow-x: scroll;
+  }
 }
 /*-------------path animation----------*/
 /* .locura {

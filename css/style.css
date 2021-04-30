@@ -79,6 +79,12 @@ ul.banner li:nth-child(3) {
     transform: translateX(-120vw);
   }
 }
+
+/* div.banner {
+  all: unset;
+  display: none;
+} */
+
 /*---------end banner-----------*/
 
 /*------- navigation ------------*/
@@ -134,17 +140,4 @@ ul.navigation a {
 
 .silfen {
   background-color: var(--silfenBlue);
-}
-
-input[type="search"] {
-  width: 30vw;
-  height: 3vw;
-  border: solid 2px var(--silfenBlue);
-  border-radius: 1.5vw;
-  padding: 0 3rem;
-  font-size: 1.5rem;
-}
-/*-------------search------------*/
-.red {
-  color: red;
 }
