@@ -15,7 +15,7 @@
 
 body.shop,
 body.productSilfen {
-  background: url(/assets/silfen_s_frame.svg);
+  background: url(../assets/silfen_s_frame.svg);
   background-size: 200px;
   background-attachment: fixed;
 }
