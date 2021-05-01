@@ -142,4 +142,8 @@ ul.navigation a {
     all: unset;
     display: none;
   }
+  header nav {
+    all: unset;
+    display: none;
+  }
 }
