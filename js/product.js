@@ -2,6 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 
 const idProduct = urlParams.get("product");
 
+var productInfo;
+
 window.addEventListener("load", fetchProduct);
 
 function fetchProduct() {
@@ -15,6 +17,7 @@ function fetchProduct() {
     .then((response) => {
       console.log(response);
       showProduct(response);
+
       fetchSmallCards();
     })
     .catch((err) => {
@@ -23,6 +26,8 @@ function fetchProduct() {
 }
 
 function showProduct(product) {
+  console.log(product);
+
   document.querySelector(".productName").textContent = product.product_name;
   document.querySelector(".price").textContent = `${product.price} kr.`;
   if (product.sale) {
@@ -68,13 +73,13 @@ function fetchSmallCards() {
     .then((res) => res.json())
     .then((response) => {
       var x = response.length;
-      console.log(x + "largo");
+      // console.log(x + "largo");
       var y;
       var i;
       for (i = 0; i < 4; i++) {
         y = Math.floor(Math.random() * x);
         productsArray.push(response[y]);
-        console.log(response[y]);
+        // console.log(response[y]);
       }
 
       showProductList(productsArray);
@@ -116,3 +121,9 @@ function showProductList(products) {
     document.querySelector(".productListContainer").appendChild(copy);
   });
 }
+
+console.log(localStorage);
+
+localStorage.setItem("_id", `"${idProduct}"`);
+
+console.log(productInfo);

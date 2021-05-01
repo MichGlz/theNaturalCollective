@@ -429,6 +429,12 @@ div.selected {
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+#addToCart:hover {
+  box-shadow: 0 0 10px black;
+  transform: scale(1.05);
 }
 
 .sideBtn {
@@ -548,6 +554,35 @@ div.selected {
     justify-content: center;
   }
 
+  .productListOuterContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .productSilfen .productListContainer {
+    all: unset;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+  }
+
+  .productSilfen .productListContainer > * {
+    transform: scale(1);
+  }
+  .productSilfen .productListContainer * + * {
+    margin-left: 1.5rem;
+  }
+
+  .productSilfen .smallCardContainer {
+    width: 250px;
+  }
+
+  .productSilfen .smallCard {
+    height: 100%;
+    width: 250px;
+  }
+
   .containerMiniPics {
     margin-top: max(5vw, 5vh);
     display: flex;
@@ -566,6 +601,19 @@ div.selected {
   .outerContainerMiniPics {
     justify-content: left;
     overflow-x: scroll;
+  }
+
+  .productListOuterContainer {
+    justify-content: left;
+    overflow-x: scroll;
+  }
+  .productSilfen .productListContainer {
+    justify-content: left;
+  }
+
+  .btnBack {
+    all: unset;
+    display: none;
   }
 }
 /*-------------path animation----------*/
