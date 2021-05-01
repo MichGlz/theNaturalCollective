@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SILFEN</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/search.css"/>
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   </head>
   <body>
@@ -35,9 +36,44 @@
       </div>
       </header>
       <main>
+       
+         
+        <form action="#" method="get" role="search" class="search">
         
+          <input type="search" name="query" placeholder="search..." />
+          <button class="btnSearch" type="submit"></button>
+          <div ></div>
+        </form>
+      
+        <section class="matchList">
+ 
+        </section>
+       
       </main>
+      
       <footer></footer>
     </div>
+    <div class="message displaySMS">
+      <p></p>
+    </div>
+   
+    <template id="productmatch">
+      <article class="productMatch">
+        <a class="linkProduct" href="" > </a>
+          <div class="productmatchImg">
+          <img src="" alt="" >
+        </div>
+        <div class="infoProductMatch">
+        <h2 class="productName"></h2>
+        <p class="price"></p>
+        <p class="description"></p>
+      </div>
+      </article>
+    </template>
+
+
+    
+    <script src="js/search.js"></script>
   </body>
 </html>
+

@@ -1,0 +1,147 @@
+:root {
+  --silfenBlue: #7bafd4;
+  --silfenplayYellow: #edff00;
+  --silfenplayGreen: #aed5b2;
+  --primaryFont: "Roboto", sans-serif;
+  --secondaryFont: "Manrope", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.red {
+  color: rgb(90, 87, 87);
+}
+
+.search {
+  position: relative;
+  width: max(350px, 40vw);
+}
+
+input[type="search"] {
+  width: max(350px, 40vw);
+  height: max(40px, 3vw);
+  border: solid 2px var(--silfenBlue);
+  border-radius: max(20px, 1.5vw);
+  padding: 0 3rem;
+  font-size: 1.5rem;
+}
+input[type="search"]:focus {
+  border: solid 3px var(--silfenBlue);
+  border-radius: max(20px, 1.5vw);
+}
+
+.btnSearch {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  background-image: url(/assets/search.svg);
+  background-repeat: no-repeat;
+  background-size: max(30px, 2vw);
+  background-position: center;
+  width: max(5vw, 65px);
+  height: max(40px, 3vw);
+  top: 0;
+  right: 0;
+  border-radius: 0 1.5vw 1.5vw 0;
+  cursor: pointer;
+}
+
+.matchList {
+  display: flex;
+  flex-direction: column;
+  padding: min(3rem, 2vw);
+  width: 100%;
+  background: url(/assets/silfen_s_frame.svg);
+  background-size: 200px;
+  background-attachment: fixed;
+  align-items: center;
+  margin-top: 50px;
+}
+.matchList * + * {
+  margin-top: 1.5rem;
+}
+
+.productMatch {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: max(350px, 50vw);
+  padding-left: 5vw;
+}
+.infoProductMatch {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primaryFont);
+  padding: 2rem;
+  font-size: 120%;
+}
+.infoProductMatch * + * {
+  margin-top: 1rem;
+}
+
+.productmatchImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 5px 10px 15px rgba(110, 109, 109, 0.308);
+}
+
+.productmatchImg img {
+  width: 100%;
+}
+
+.linkProduct {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.linkProduct:hover {
+  background: #7bafd445;
+  box-shadow: 5px 10px 25px rgba(110, 109, 109, 0.308);
+  transform: scale(1.1);
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: var(--primaryFont);
+  font-size: calc(3rem + 2vw);
+  pointer-events: none;
+  display: none;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.displaySMS {
+  display: block;
+  opacity: 1;
+}
+
+.prevPrice {
+  text-decoration-line: line-through;
+  opacity: 0.5;
+  margin-right: 2rem;
+}
+
+.productName {
+  max-width: 20ch;
+}
