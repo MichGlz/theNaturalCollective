@@ -80,11 +80,6 @@ ul.banner li:nth-child(3) {
   }
 }
 
-/* div.banner {
-  all: unset;
-  display: none;
-} */
-
 /*---------end banner-----------*/
 
 /*------- navigation ------------*/
@@ -140,4 +135,11 @@ ul.navigation a {
 
 .silfen {
   background-color: var(--silfenBlue);
+}
+
+@media screen and (max-width: 850px) {
+  div.banner {
+    all: unset;
+    display: none;
+  }
 }
