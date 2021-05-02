@@ -61,9 +61,10 @@ function fetchProductList() {
 }
 
 function fetchProductFilter(e) {
-  console.log(e.originalTarget.value);
-  const color = e.originalTarget.value;
-  const name = e.originalTarget.name;
+  console.log("hola");
+  console.log(e);
+  const color = e.target.value;
+  const name = e.target.name;
   if (color == "all") {
     location.href = `shop.html?all=true`;
     return;
@@ -73,7 +74,6 @@ function fetchProductFilter(e) {
 }
 
 function showProductList(products) {
-  // console.log(posts);
   //grab the template
   const template = document.querySelector("template.productSmallCard").content;
 
