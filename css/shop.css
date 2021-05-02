@@ -41,7 +41,7 @@ h1 {
 aside {
   grid-area: aside;
   height: 90vh;
-  width: 20vw;
+  width: 350px;
   padding: 2rem;
 }
 
@@ -210,7 +210,7 @@ input {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
   gap: 2rem;
   padding-bottom: max(3vw, 5vh);
   padding-top: max(3vw, 5vh);
@@ -525,7 +525,11 @@ div.selected {
     display: flex;
     justify-content: center;
   }
-  aside {
+
+  .shop .productListContainer {
+    width: max(60vw, 300px);
+  }
+  /* aside {
     width: 0%;
     height: inherit;
     padding: 0;
@@ -538,7 +542,7 @@ div.selected {
     background-image: url(assets/silfen_s_frame.svg);
     background-size: 100px;
     background-attachment: fixed;
-  }
+  } */
   div.filter {
     padding: 1rem;
   }
@@ -597,6 +601,10 @@ div.selected {
 }
 
 @media screen and (max-width: 850px) {
+  body.shop {
+    padding-left: 1rem;
+  }
+
   .outerContainerMiniPics {
     justify-content: left;
     overflow-x: scroll;
