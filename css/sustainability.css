@@ -1,3 +1,8 @@
+ul.navigation .silfenPlayLink a {
+  color: var(--silfenplayGreen);
+  font-weight: 500;
+}
+
 main {
   margin-top: 50px;
 }
@@ -5,6 +10,7 @@ main {
 h2 {
   font-family: var(--primaryFont);
   font-size: 3rem;
+  margin-top: 3em;
 }
 h3 {
   font-family: var(--primaryFont);
@@ -17,14 +23,11 @@ h4 {
 
 p {
   font-family: var(--secondaryFont);
-  max-width: 300px;
+  line-height: 2;
+  margin-top: 2em;
+  text-align: center;
 }
 
-.intro_p {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-}
 .intro {
   margin: auto;
   max-width: 600px;
@@ -66,6 +69,13 @@ p {
   padding: 30px;
 }
 
+.recycled_collection {
+  margin-top: 14em;
+}
+.recycled_collection .recycled_h2 {
+  font-size: 2.5em;
+}
+
 .recycled_img {
   max-width: 95%;
 }
@@ -75,16 +85,26 @@ p {
 }
 
 .recycled_text {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  margin-top: 20px;
+  text-align: left;
+  width: 35%;
+  margin: 1vw 0 3vw 15vw;
+}
+
+.recycled_price {
+  margin-top: 0em;
+}
+
+button {
+  background-color: #7bafd4;
+  border: lightblue;
+  border-radius: 2px;
+  padding: 1.5em 2em;
+  color: white;
 }
 .recycled_button {
   display: block;
   margin: auto;
   margin-top: 40px;
-  padding: 10px;
   background-color: var(--silfenBlue);
   border: 2px solid outset;
   border-color: var(--silfenBlue);
