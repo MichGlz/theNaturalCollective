@@ -1,3 +1,14 @@
+.logosp {
+  width: 15%;
+}
+
+.logosp img {
+  width: 100%;
+}
+
+ul.navigation .silfenLink {
+  color: var(--silfenBlue);
+}
 .sp_main {
   background: rgba(237, 255, 0, 0.2);
 }
