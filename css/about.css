@@ -1,4 +1,10 @@
 /*--------- main ------------*/
+
+ul.navigation .silfenPlayLink a {
+  color: var(--silfenplayGreen);
+  font-weight: 500;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -18,9 +24,10 @@ a {
   margin: auto;
 }
 .intro_div p {
-  max-width: 400px;
+  max-width: 35%;
   margin: auto;
   text-align: center;
+  line-height: 2;
 }
 
 .meet_founders_h2 {
@@ -28,6 +35,7 @@ a {
   max-width: 9ch;
   align-self: flex-start;
   margin-left: 350px;
+  margin-bottom: 1em;
 }
 
 .about_flex2 {
@@ -37,11 +45,13 @@ a {
 
 .daniel_text {
   margin-top: 20px;
-  margin-right: 10px;
+  margin-right: 2em;
 }
 
 .daniel_text p {
   text-align: right;
+  margin-top: 0.8em;
+  line-height: 1.5;
 }
 
 .celine_h3 {
@@ -54,6 +64,7 @@ a {
   align-self: flex-end;
   margin-right: 200px;
   margin-top: 10px;
+  line-height: 1.5;
 }
 
 img {
@@ -64,7 +75,7 @@ h1 {
   font-family: var(--primaryFont);
   text-transform: uppercase;
   text-align: center;
-  font-size: 7rem;
+  font-size: 5rem;
 }
 
 h2 {
@@ -97,13 +108,15 @@ p {
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
+  text-align: center;
 }
 
-.sustainability_button {
-  padding: 10px;
-  background-color: var(--silfenBlue);
-  border: 2px solid outset;
-  border-color: var(--silfenBlue);
+button {
+  background-color: #7bafd4;
+  border: lightblue;
+  border-radius: 2px;
+  padding: 1.5em 2em;
+  color: white;
 }
 
 .sustainability_button a {
@@ -120,6 +133,7 @@ p {
 .meet_team_h2 {
   text-transform: uppercase;
   text-align: center;
+  margin-top: 3em;
 }
 
 .team_div {
@@ -150,4 +164,5 @@ p {
 
 .team_text {
   text-align: center;
+  margin-top: -1em;
 }
