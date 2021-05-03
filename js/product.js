@@ -24,9 +24,11 @@ function fetchProduct() {
       console.error(err);
     });
 }
-
+let productLocal = {};
+let product_name_local;
 function showProduct(product) {
-  console.log(product);
+  productLocal = JSON.stringify(product);
+  product_name_local = product.product_name;
 
   document.querySelector(".productName").textContent = product.product_name;
   document.querySelector(".price").textContent = `${product.price} kr.`;
@@ -127,3 +129,6 @@ console.log(localStorage);
 localStorage.setItem("_id", `"${idProduct}"`);
 
 console.log(productInfo);
+
+localStorage.setItem(`"${product_name_local}"`, productLocal);
+console.log(productLocal);
