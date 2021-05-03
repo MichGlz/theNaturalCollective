@@ -6,8 +6,9 @@
   width: 100%;
 }
 
-ul.navigation .silfenLink {
+ul.navigation .silfenLink a {
   color: var(--silfenBlue);
+  font-weight: 500;
 }
 .sp_main {
   background: rgba(237, 255, 0, 0.2);
