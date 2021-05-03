@@ -103,6 +103,7 @@ p {
   margin: 3em 1.5em;
   width: 20%;
   text-align: center;
+  line-height: 2;
   /* display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -113,8 +114,8 @@ p {
 
 h3 {
   font-family: "Roboto";
-  margin-top: 2vw;
-  margin-bottom: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
 }
 
 .home_values img {
@@ -255,6 +256,7 @@ button {
 }
 .bestseller_text p {
   margin-bottom: 3em;
+  line-height: 2;
 }
 
 .bestseller_row3 {
@@ -287,6 +289,7 @@ button {
   margin-right: 4em;
   max-width: 45ch;
   color: #7bafd4;
+  line-height: 2;
 }
 
 .story_text h2 {
