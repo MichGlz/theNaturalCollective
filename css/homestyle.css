@@ -81,22 +81,29 @@ p {
   align-items: center;
   margin-bottom: 4em;
   margin-top: 4em;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .home_values {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin: 4vw 0;
-  padding: 0 10em;
+  width: 100%;
+  /* align-items: center; */
+  /* margin: 4vw 0;
+ */
 }
 
 .home_values div {
-  display: flex;
+  margin: 3em 1.5em;
+  width: 20%;
+  text-align: center;
+  /* display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0 2em;
+  margin: 0 2em; */
 }
 
 h3 {
@@ -372,6 +379,9 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
+  .home_values div {
+    width: 30%;
+  }
   .sp_main .imgs {
     flex-direction: column;
   }
