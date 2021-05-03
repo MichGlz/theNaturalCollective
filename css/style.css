@@ -38,6 +38,7 @@ div.banner {
 
 .banner a {
   color: rgb(255, 255, 255);
+  text-decoration: underline;
 }
 
 ul.banner {
@@ -135,6 +136,71 @@ ul.navigation a {
 
 .silfen {
   background-color: var(--silfenBlue);
+}
+
+/*--------- footer ------------*/
+
+footer {
+  background-color: white;
+  max-width: 1000px;
+  margin: auto;
+  font-family: var(--primaryFont);
+  margin-bottom: 10px;
+  background-color: white;
+  z-index: 100;
+  margin-top: 100px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  text-transform: initial;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-around;
+  border-top: black solid 1px;
+  border-bottom: black solid 1px;
+  padding: 30px;
+}
+
+footer ul {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+footer h4 {
+  font-size: 1.2rem;
+}
+
+.footer_logo {
+  width: 300px;
+}
+
+footer p {
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  opacity: 0.7;
+}
+
+.footer_social_media {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  margin: auto;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+footer img {
+  width: 50px;
 }
 
 @media screen and (max-width: 850px) {
