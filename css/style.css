@@ -153,18 +153,24 @@ ul.navigation .silfenPlayLink a {
 /*--------- footer ------------*/
 
 footer {
-  background-color: white;
-  max-width: 1000px;
-  margin: auto;
-  font-family: var(--primaryFont);
-  margin-bottom: 10px;
-  background-color: white;
-  z-index: 100;
-  margin-top: 100px;
-}
-footer nav {
   display: flex;
-  flex-direction: row;
+  background-color: #ececec;
+  width: 100%;
+  font-family: var(--primaryFont);
+  z-index: 100;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.footerWrapper {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer a {
@@ -174,7 +180,7 @@ footer a {
 }
 
 .footer_submit a {
-  color: white;
+  color: black;
 }
 .newsletter input {
   margin: 1em 0;
@@ -184,12 +190,15 @@ footer a {
   padding: 0.4em 1em;
 }
 footer nav {
+  color: black;
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 2em;
   justify-content: space-around;
-  border-top: black solid 1px;
-  border-bottom: black solid 1px;
+  border-top: #999999 solid 1px;
+  border-bottom: #999999 solid 1px;
   padding: 30px;
 }
 
@@ -208,14 +217,15 @@ footer h4 {
 .footer_logo {
   width: 200px;
   margin-bottom: 2em;
+  fill: white;
 }
 
 footer p {
   text-align: center;
   margin: auto;
   margin-top: 1em;
-  opacity: 0.7;
   display: inline;
+  color: #999999;
 }
 
 .footer_social_media {

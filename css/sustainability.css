@@ -60,6 +60,7 @@ p {
   margin-top: 4em;
   flex-wrap: wrap;
   width: 100%;
+  display: none;
 }
 .home_values {
   display: flex;
@@ -117,6 +118,7 @@ h3 {
 
 .recycled_collection {
   margin-top: 14em;
+  padding-bottom: 5em;
 }
 .recycled_collection .recycled_h2 {
   font-size: 2.5em;
@@ -192,6 +194,9 @@ button {
   .recycled_bags div {
     width: 40%;
     margin: 2em 0;
+  }
+  .value_wrapper {
+    display: flex;
   }
   .principles_svg {
     display: none;
