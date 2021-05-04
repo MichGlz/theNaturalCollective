@@ -109,6 +109,7 @@ input[type="radio"]:checked + label::before {
   border: solid 2px black;
   border-radius: 50%;
 }
+
 input[type="checkbox"]:checked + label::before {
   height: 15px;
   width: 15px;
@@ -584,6 +585,17 @@ div.selected {
   margin-left: 0.3em;
 }
 
+label.menu-icon::before {
+  all: unset;
+  width: 0;
+  display: none;
+}
+label.menu-icon {
+  all: unset;
+  width: 0;
+  display: none;
+}
+
 @media screen and (max-width: 1500px) {
   .main-asideWrapper {
     margin-top: 140px;
@@ -687,11 +699,6 @@ div.selected {
     all: unset;
     display: none;
   }
-}
-
-header input,
-header label {
-  display: none;
 }
 
 /*-------------path animation----------*/
