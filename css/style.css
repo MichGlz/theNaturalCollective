@@ -118,6 +118,10 @@ ul.navigation a {
   font-size: 110%;
 }
 
+ul.navigation .activeLink {
+  font-weight: 700;
+}
+
 ul.navigation .silfenPlayLink a {
   color: var(--silfenplayGreen);
   font-weight: 500;
