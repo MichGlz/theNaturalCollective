@@ -327,6 +327,18 @@ button {
 #blackout:target {
   display: block;
 }
+
+.subscribebutton {
+  background: #aed582;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  width: 150px;
+  height: 40px;
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
 .close {
   display: block;
   float: right;
