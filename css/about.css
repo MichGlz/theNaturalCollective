@@ -42,6 +42,9 @@ a {
   display: flex;
   flex-direction: row;
 }
+.danielWrapper {
+  display: flex;
+}
 
 .daniel_text {
   margin-top: 20px;
@@ -54,15 +57,23 @@ a {
   line-height: 1.5;
 }
 
+.celineWrapper {
+  display: flex;
+}
+
+.celine_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
 .celine_h3 {
-  display: block;
-  align-self: flex-end;
-  margin-left: 10px;
+  text-align: left;
 }
 
 .celine_p {
-  align-self: flex-end;
-  margin-right: 200px;
   margin-top: 10px;
   line-height: 1.5;
 }
@@ -133,7 +144,7 @@ button {
 .meet_team_h2 {
   text-transform: uppercase;
   text-align: center;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 .team_div {
@@ -165,4 +176,37 @@ button {
 .team_text {
   text-align: center;
   margin-top: -1em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .intro_div p {
+    max-width: 50%;
+  }
+
+  .celine_p {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro_div p {
+    max-width: 80%;
+  }
+
+  .meet_founders_h2 {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .about_flex2 {
+    flex-direction: column;
+  }
+
+  .celineWrapper {
+    margin-top: 2em;
+  }
+
+  .meet_team_h2 {
+    margin-top: 0;
+  }
 }
