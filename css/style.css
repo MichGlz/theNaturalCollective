@@ -152,6 +152,10 @@ footer {
   z-index: 100;
   margin-top: 100px;
 }
+footer nav {
+  display: flex;
+  flex-direction: row;
+}
 
 footer a {
   text-decoration: none;
@@ -159,6 +163,16 @@ footer a {
   text-transform: initial;
 }
 
+.footer_submit a {
+  color: white;
+}
+.newsletter input {
+  margin: 1em 0;
+}
+
+.newsletter button {
+  padding: 0.4em 1em;
+}
 footer nav {
   display: flex;
   flex-direction: row;
@@ -182,7 +196,7 @@ footer h4 {
 }
 
 .footer_logo {
-  width: 300px;
+  width: 200px;
 }
 
 footer p {
@@ -213,5 +227,10 @@ footer img {
   header nav {
     all: unset;
     display: none;
+  }
+
+  footer nav {
+    display: flex;
+    flex-direction: column;
   }
 }

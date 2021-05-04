@@ -1,18 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Roboto:ital,wght@0,900;1,900&display=swap");
 
+ul.navigation .silfenPlayLink a {
+  color: var(--silfenplayGreen);
+  font-weight: 500;
+}
+
 .hero_wrapper {
-  margin-top: 200px;
-  position: relative;
-  z-index: -1;
-  height: 100vh;
-  width: 100%;
-  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15em;
+  margin-top: 3em;
 }
 
 /*girl with flower*/
 .hero1 {
   position: absolute;
-  top: 40%;
+  top: 12vw;
   left: 0px;
   z-index: -2;
 }
@@ -28,7 +32,7 @@
 /*girl profile with bag*/
 .hero3 {
   position: absolute;
-  top: 40%;
+  top: 20vw;
   right: 0;
   z-index: -2;
 }
@@ -36,15 +40,16 @@
 /*lying down with bag*/
 .hero4 {
   position: absolute;
-  right: 20vw;
+  right: 15vw;
   z-index: -2;
+  top: 1vw;
 }
 
 /*water*/
 .hero5 {
   position: absolute;
-  top: 80%;
-  right: 10vw;
+  top: 35vw;
+  right: 17vw;
   z-index: -2;
 }
 
@@ -53,9 +58,12 @@
 }
 
 .hero_text {
-  margin-left: 20vw;
-  margin-right: 20vw;
-  padding: 15vw;
+  color: var(--silfenBlue);
+  /* margin-left: 20vw; */
+  /* margin-right: 20vw; */
+  /* padding: 15vw; */
+  width: 50%;
+  text-align: center;
 }
 
 .hero_text h1 {
@@ -64,36 +72,54 @@
 }
 
 h2 {
-  font-size: 2rem;
-  font-family: "Roboto", sans-serif;
-  margin-top: 5vw;
-  margin-left: 10vw;
-  margin-right: 20vw;
+  font-size: 2.5rem;
+  font-family: var(--primaryFont), sans-serif;
 }
 
 p {
   font-size: 1rem;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--secondaryFont);
 }
-
+.value_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .home_values {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  column-gap: 4vw;
-  margin-top: 10vw;
-  margin-right: 10vw;
-  margin-left: 10vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  /* align-items: center; */
+  /* margin: 4vw 0;
+ */
+}
+
+.home_values div {
+  margin: 3em 1.5em;
+  width: 20%;
+  text-align: center;
+  line-height: 2;
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 2em; */
 }
 
 h3 {
   font-family: "Roboto";
-  margin-top: 4vw;
-  margin-bottom: 2vw;
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
 }
 
 .home_values img {
-  max-width: 100px;
+  max-width: 50%;
   max-height: 80px;
 }
 
@@ -101,17 +127,15 @@ button {
   background-color: #7bafd4;
   border: lightblue;
   border-radius: 2px;
-  width: 170px;
-  height: 55px;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  padding: 1.5em 2em;
+  color: white;
 }
 
 .button_play {
   background-color: #aed582;
 }
 
-.play_wrapper {
+/* .play_wrapper {
   margin-top: 10vw;
   background-color: #eeff0036;
   position: relative;
@@ -119,44 +143,81 @@ button {
   height: 80vh;
   width: 100%;
   margin-bottom: 8%;
+} */
+
+.mainWrapper {
+  padding: 2vw 10vw 4vw;
 }
 
-.shoes {
-  position: absolute;
-  top: 8vw;
-  left: 40%;
-  z-index: -2;
+.sp_main {
+  background: rgba(237, 255, 0, 0.2);
 }
 
-.clothes {
-  position: absolute;
-  top: 12vw;
-  left: 60%;
-  z-index: -2;
+.sp_main .img1 {
+  width: 40%;
+  margin-top: -40px;
+}
+.sp_main .img2 {
+  width: 30%;
+  margin-left: -50px;
+  margin-top: -190px;
 }
 
-.play_wrapper img {
-  max-width: 40%;
-  height: auto;
+.sp_main .img3 {
+  width: 40%;
+  margin-top: -30px;
+  margin-right: -70px;
+  margin-bottom: 2em;
 }
 
-.play_text {
-  margin-left: 10vw;
-  margin-right: 20vw;
-  padding-top: 2vw;
-  max-width: 45ch;
+.mainWrapper {
+  padding: 2vw 10vw 4vw;
 }
 
-.play_text h2 {
-  margin-left: 0;
+.imgs {
+  padding: 10vw 10vw 0vw 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  margin: 0 10vw;
+}
+
+.info h1 {
+  font-family: var(--primaryFont);
+  font-size: 2.5em;
+}
+
+.info p {
+  font-family: var(--secondaryFont);
+  width: 40%;
+  margin: 1vw 0 3vw 3vw;
+  line-height: 2;
+}
+
+.info .link {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #aed582;
+  color: white;
+  border-radius: 4px;
+  font-family: var(--primaryFont);
+  margin-left: 3vw;
 }
 
 .bestseller_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bestseller_wrapper {
   display: flex;
   flex-direction: row;
-  margin: 10vw;
-  justify-content: space-between;
   align-items: center;
+  margin: 4em;
 }
 
 .bestseller_row1 {
@@ -165,33 +226,38 @@ button {
 }
 
 .bestseller_row1 img {
-  max-width: 200px;
+  max-width: 250px;
   max-height: auto;
-  margin: 2vw;
+  margin: 1.5vw;
 }
 
 .bestseller_row2 {
   display: flex;
   flex-direction: column;
   max-width: 40ch;
+  align-items: center;
+  justify-content: center;
 }
 
 .bestseller_row2 img {
-  max-width: 200px;
-  max-height: 300px;
-  margin: 2vw;
-  margin-top: 15vw;
+  max-width: 300px;
+  max-height: 350px;
+  margin: 4vw 1.5vw;
 }
 
 .bestseller_text {
   max-width: 30ch;
-  margin-left: 0;
   text-align: center;
+  margin: 10em 0;
 }
 
 .bestseller_text h2 {
-  margin-left: 2vw;
   text-align: center;
+  margin-bottom: 0.6em;
+}
+.bestseller_text p {
+  margin-bottom: 3em;
+  line-height: 2;
 }
 
 .bestseller_row3 {
@@ -200,71 +266,67 @@ button {
 }
 
 .bestseller_row3 img {
-  max-width: 200px;
-  max-height: 300px;
-  margin: 2vw;
+  max-width: 300px;
+  max-height: 350px;
+  margin: 1.5vw;
 }
 
 .story_wrapper {
-  margin-top: 10vw;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
   background-color: #c0def5;
   position: relative;
-  z-index: -1;
-  height: 100vh;
-  width: 100%;
-  margin-bottom: 8%;
-}
-
-.story_bag {
-  position: absolute;
-  top: 8vw;
-  right: 8vw;
-  z-index: -2;
-}
-
-.story_flower {
-  position: absolute;
-  top: 15vw;
-  right: 20vw;
-  z-index: -2;
+  padding: 5em 0;
 }
 
 .story_wrapper img {
-  max-width: 200px;
+  max-width: 400px;
   height: auto;
 }
 
 .story_text {
-  margin-left: 10vw;
-  margin-right: 20vw;
-  padding-top: 2vw;
+  margin-right: 4em;
   max-width: 45ch;
   color: #7bafd4;
+  line-height: 2;
 }
 
 .story_text h2 {
-  margin-left: 0;
+  margin: 0.5em 0;
+}
+
+.story_text p {
+  margin: 2em 0;
+}
+
+.story_flower img {
+  margin-right: -50px;
+  margin-bottom: 100px;
 }
 
 .focus_container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   margin: 10vw;
+  justify-content: space-evenly;
 }
 
 .arrivals_home img {
   max-width: 400px;
-  max-height: 300px;
 }
 
 .sale_home img {
   max-width: 400px;
-  max-height: 300px;
+  height: 505px;
 }
 
 .arrivals_home h2,
 .sale_home h2 {
-  margin-left: 0;
+  margin-top: 0.9em;
+  margin-bottom: 0.5em;
 }
 
 .social_text {
@@ -275,15 +337,14 @@ button {
 
 .igfeed {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  column-gap: 0;
+  justify-content: center;
+  width: 100vw;
 }
 
 .igfeed img {
-  max-width: 200px;
+  max-width: 250px;
   height: auto;
-  margin: 2vw;
+  margin: 1.5vw;
 }
 
 .center {
@@ -292,5 +353,114 @@ button {
   margin-right: auto;
   margin-top: 5%;
   margin-bottom: 5%;
-  width: 120px;
+  padding: 1.5em 2em;
+  color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sp_main .info p {
+    width: 60%;
+    margin: 1em 0;
+  }
+
+  .story_wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .story_text {
+    text-align: center;
+  }
+
+  .story_flower {
+    margin-top: -100px;
+    margin-left: 100px;
+  }
+
+  .focus_container {
+    align-items: center;
+  }
+
+  .arrivals_home {
+    margin-bottom: 3em;
+  }
+
+  .hero5 {
+    display: none;
+  }
+  .hero1 {
+    position: initial;
+  }
+  .hero_wrapper {
+    flex-direction: column;
+    justify-content: left;
+    padding: 0;
+    text-align: center;
+  }
+
+  .hero_text h1 {
+    margin-top: 3em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero_wrapper {
+    padding: 0;
+  }
+  .hero2,
+  .hero4 {
+    display: none;
+  }
+  .hero_text {
+    width: 90%;
+    margin: 0 3em;
+  }
+
+  .home_values div {
+    width: 30%;
+  }
+  .sp_main .imgs {
+    flex-direction: column;
+  }
+  .sp_main .img1 {
+    width: 70%;
+  }
+  .sp_main .img2 {
+    width: 70%;
+    margin-top: -100px;
+    margin-left: -125px;
+    margin-bottom: 3em;
+  }
+  .sp_main .img3 {
+    content-visibility: hidden;
+  }
+
+  .mainWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3em 0;
+  }
+  .bestseller_text {
+    max-width: 100%;
+  }
+  .sp_main .info p {
+    width: 100%;
+    margin: 1vw 0;
+  }
+
+  .sp_forth .info p {
+    width: 100%;
+  }
+
+  .story_text {
+    margin-top: -2em;
+    margin-right: 0;
+  }
+
+  .igfeed img {
+    width: 20%;
+  }
 }
