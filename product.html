@@ -63,8 +63,8 @@
             <div class="infoWrapper">
               <div class="recycledIcon big"></div>
               <h2 class="productName">Silfen Bag</h2>
-              <p class="price"></p>
-              <p class="description"></p>
+              <p id="price" class="price"></p>
+              <p id="description" class="description"></p>
               <div class="colorsList"><h3>COLOURS:</h3></div>
               <button id="addToCart">ADD TO CART</button>
             </div>
@@ -108,5 +108,58 @@
     </template>
 
     <script src="js/product.js"></script>
+    <footer>
+      <nav>
+        <img src="assets/blue_silfen_logo.svg" class="footer_logo" />
+
+        <ul>
+          <h4>About</h4>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+        <div class="newsletter">
+          <div class="input-group">
+            <h4>Sign up for our newsletter</h4>
+            <input
+              class="input-group-field"
+              type="email"
+              placeholder="Email address"
+            />
+          </div>
+          <button class="footer_submit"><a href="#">Submit</a></button>
+        </div>
+        <ul>
+          <h4>Conditions</h4>
+          <li><a href="">Terms and conditions</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Returns</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+      </nav>
+      <ul class="footer_social_media">
+        <li>
+          <a target="_blank" href="https://www.instagram.com/silfenstudio/"
+            ><img src="assets/instagram.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.facebook.com/Silfenstudio"
+            ><img src="assets/facebook.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCwUsHwkGR4253v1iySaJJZw"
+            ><img src="assets/youtube.svg" alt=""
+          /></a>
+        </li>
+      </ul>
+      <p>
+        © Copyright | Silfen | Klareboderne 10, 1, DK-1115 København |
+        <strong>Phone:</strong> +45 20 51 89 23 |
+        <strong>Email:</strong> info@silfenstudio.com | CVR. 40912320
+      </p>
+    </footer>
   </body>
 </html>

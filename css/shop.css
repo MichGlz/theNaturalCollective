@@ -393,13 +393,14 @@ main.productSilfen {
   position: relative;
 }
 
-.infoWrapper > * + * {
+/* .infoWrapper > * + * {
   margin-top: 2rem;
-}
+} */
 
 .bigCard h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: lighter;
+  letter-spacing: 0.1em;
 }
 
 .productSilfen .recycledIcon {
@@ -407,6 +408,14 @@ main.productSilfen {
   right: 10px;
 }
 
+#price {
+  margin: 0.5em 0;
+}
+#description {
+  font-size: 1em;
+  line-height: 1.8em;
+  margin-top: 3em;
+}
 p.description,
 .bigCard .price {
   max-width: 40ch;
