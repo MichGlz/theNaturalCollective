@@ -4,16 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SILFEN</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/cart.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
   </head>
   <body>
-    <section class="products">
-        
+    <div class="pageWrapper">
+      <header>
+        <div class="banner silfen">
+          <ul class="banner">
+            <li>
+              &#x2728; <a href="silfenplay.html">NEW! DISCOVER SILFEN PLAY</a>
+            </li>
+            <li>&#128666; <a href="#">FREE SHIPPING</a></li>
+            <li>
+              &#x1F449;
+              <a href="#">GET 15% OFF - SIGN UP TO OUR NEWSLETTER</a> &#x1F448;
+            </li>
+          </ul>
+        </div>
+        <div class="navwrapper">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="assets/silfen_logo.svg" alt="logo"
+            /></a>
+          </div>
+          <nav>
+            <ul class="navigation">
+              <li><a href="shop.html?all=true">SHOP</a></li>
+              <li><a href="about.html">OUR STORY</a></li>
+              <li>
+                <a class="dinamicBrand" href="sustainability.html"
+                  >SUSTAINABILITY</a
+                >
+              </li>
+              <li class="silfenPlayLink">
+                <a href="silfenplay.html">SILFENPLAY</a>
+              </li>
+              <li><a href="">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="search-cart">
+            <a href="search.html"><img src="assets/search.svg" alt="icon" /></a
+            ><a href=""><img src="assets/cart.svg" alt="icon" /></a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <form action="#" method="get" role="search" class="search">
+          <input type="search" name="query" placeholder="search..." />
+          <button class="btnSearch" type="submit"></button>
+          <div></div>
+        </form>
 
-    </section>  
-    <aside class="cart"></aside>
+        <section class="matchList"></section>
+      </main>
 
-    <script src="js/cart.js"></script>
+      <footer></footer>
+    </div>
+    <div class="message displaySMS">
+      <p></p>
+    </div>
+
+    <template id="productmatch">
+      <article class="productMatch">
+        <a class="linkProduct" href=""> </a>
+        <div class="productmatchImg">
+          <img src="" alt="" />
+        </div>
+        <div class="infoProductMatch">
+          <h2 class="productName"></h2>
+          <p class="price"></p>
+          <p class="description"></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="js/search.js"></script>
   </body>
 </html>
