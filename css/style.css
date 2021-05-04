@@ -175,12 +175,12 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: black;
+  color: #717171;
   text-transform: initial;
 }
 
 .footer_submit a {
-  color: black;
+  color: #717171;
 }
 .newsletter input {
   margin: 1em 0;
@@ -190,7 +190,7 @@ footer a {
   padding: 0.4em 1em;
 }
 footer nav {
-  color: black;
+  color: #717171;
   display: flex;
   flex-direction: row;
   max-width: 1000px;
