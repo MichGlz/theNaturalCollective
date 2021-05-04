@@ -42,7 +42,8 @@ aside {
   grid-area: aside;
   height: 90vh;
   width: 350px;
-  padding: 2rem;
+  padding: 2rem 0 2rem 2rem;
+  margin-top: 6em;
 }
 
 .filter > div {
@@ -77,13 +78,16 @@ aside {
   display: block;
   margin-bottom: 1rem;
   font-family: var(--primaryFont);
+  font-weight: 400;
+  letter-spacing: 0.05em;
   position: relative;
   text-align: left;
   margin-left: 30px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 2px;
   transition: 0.3s linear;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .shop label::before {
@@ -92,7 +96,8 @@ aside {
   width: 20px;
   position: absolute;
   left: -30px;
-  border: solid 1px black;
+  border-radius: 2px;
+  border: solid 0.1px grey;
   transition: 0.2s linear;
 }
 
@@ -164,45 +169,59 @@ input {
 .types,
 .collections {
   padding: 1rem 0;
+  width: 60%;
 }
 
 #typeFilter {
   display: flex;
   flex-direction: column;
   font-family: var(--primaryFont);
-  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
-#typeFilter * + * {
+/* #typeFilter * + * {
   margin-top: 1rem;
-}
+} */
 
 #collectionFilter {
   display: flex;
   flex-direction: column;
   font-family: var(--primaryFont);
-  font-size: 1.2rem;
 }
 
-#collectionFilter * + * {
+/* #collectionFilter * + * {
   margin-top: 1rem;
-}
+} */
 
 .collectionsWrapper,
 .typesWrapper {
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 .colorsWrapper {
   padding-top: 2rem;
+}
+
+.colorsWrapper h2,
+.typesWrapper h2,
+.collectionsWrapper h2 {
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
 }
 
 /*--------end filter----------*/
 
 .filterName {
   margin-top: 2rem;
-  margin-left: 6rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-left: 1.4em;
   font-weight: lighter;
+  letter-spacing: 0.3em;
+  text-align: left;
+}
+
+.productListOuterContainer .productListContainer {
+  width: min(1600px, 81vw);
 }
 
 .productListContainer {
@@ -222,19 +241,24 @@ input {
 }
 
 .smallCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: auto;
   padding: 2rem;
   background-color: white;
-  box-shadow: 5px 10px 15px rgba(110, 109, 109, 0.308);
+  box-shadow: 5px 10px 15px rgba(150, 150, 150, 0.233);
   font-family: var(--secondaryFont);
   text-align: left;
   transition: 0.2s;
   transform-origin: center;
+  text-transform: unset;
 }
 
 .smallCard p {
-  font-size: 120%;
+  font-size: 1.1em;
+  margin-top: 0.5em;
 }
 
 .smallCard h2 {
@@ -259,6 +283,7 @@ input {
 .imageContainer {
   width: 100%;
   margin-bottom: 2rem;
+  margin-left: 2.5em;
 }
 
 .imageContainer img {
@@ -347,6 +372,7 @@ main.productSilfen {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 5em;
 }
 
 .image-saleIcon {
@@ -372,13 +398,14 @@ main.productSilfen {
   position: relative;
 }
 
-.infoWrapper > * + * {
+/* .infoWrapper > * + * {
   margin-top: 2rem;
-}
+} */
 
 .bigCard h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: lighter;
+  letter-spacing: 0.1em;
 }
 
 .productSilfen .recycledIcon {
@@ -386,6 +413,14 @@ main.productSilfen {
   right: 10px;
 }
 
+#price {
+  margin: 0.5em 0;
+}
+#description {
+  font-size: 1em;
+  line-height: 1.8em;
+  margin: 3em 0;
+}
 p.description,
 .bigCard .price {
   max-width: 40ch;
@@ -396,6 +431,7 @@ p.description,
 .colorsList {
   display: flex;
   align-items: center;
+  margin-bottom: 3em;
 }
 
 .colorsList > * + * {
@@ -463,7 +499,7 @@ div.selected {
 }
 
 .productSilfen .productListContainer > * {
-  transform: scale(0.6);
+  transform: scale(0.9);
 }
 
 .containerMiniPics {
@@ -505,18 +541,47 @@ div.selected {
   width: 300%;
 }
 .btnBack {
-  position: fixed;
-  left: 3rem;
+  left: 8rem;
   top: 180px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: var(--secondaryFont);
   color: black;
   text-decoration-line: none;
+}
+.btnBack span {
+  margin-right: 0.3em;
 }
 
 .btnBack:hover {
   font-weight: lighter;
   font-size: 1.3rem;
+}
+.uxHelp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  margin-left: -6em;
+}
+
+.breadcrumbs ul {
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumbs ul li a {
+  color: black;
+  font-family: var(--secondaryFont);
+  margin: 0 0.3em;
+}
+
+.breadcrumbs ul li a span {
+  margin-left: 0.3em;
 }
 
 @media screen and (max-width: 1500px) {

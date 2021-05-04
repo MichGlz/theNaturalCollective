@@ -12,14 +12,16 @@
       type="image/jpg"
       href="assets/faviconSilfen.png"
     />
-    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <meta name="robots" content="noindex, nofollow" />
   </head>
   <body class="shop">
     <div class="pageWrapper">
       <header>
         <div class="banner silfen">
           <ul class="banner">
-            <li>&#x2728; <a href="#">NEW! DISCOVER SILFEN PLAY</a></li>
+            <li>
+              &#x2728; <a href="silfenplay.html">NEW! DISCOVER SILFEN PLAY</a>
+            </li>
             <li>&#128666; <a href="#">FREE SHIPPING</a></li>
             <li>
               &#x1F449;
@@ -35,16 +37,22 @@
           </div>
           <nav>
             <ul class="navigation">
-              <li><a href="">SHOP</a></li>
-              <li><a href="">OUR STORY</a></li>
-              <li><a class="dinamicBrand" href="">SUSTAINABILITY</a></li>
-              <li><a href="">SILFENPLAY</a></li>
+              <li><a class="activeLink" href="shop.html?all=true">SHOP</a></li>
+              <li><a href="about.html">OUR STORY</a></li>
+              <li>
+                <a class="dinamicBrand" href="sustainability.html"
+                  >SUSTAINABILITY</a
+                >
+              </li>
+              <li class="silfenPlayLink">
+                <a href="silfenplay.html">SILFENPLAY</a>
+              </li>
               <li><a href="">CONTACT</a></li>
             </ul>
           </nav>
           <div class="search-cart">
             <a href="search.html"><img src="assets/search.svg" alt="icon" /></a
-            ><a href=""><img src="assets/cart.svg" alt="" /></a>
+            ><a href=""><img src="assets/cart.svg" alt="icon" /></a>
           </div>
         </div>
       </header>
@@ -52,11 +60,9 @@
       <div class="main-asideWrapper">
         <aside>
           <div class="filter">
-            <h2>FILTERS</h2>
+            <!-- <h2>FILTERS</h2> -->
             <div class="colorsWrapper">
-              <h2 class="btnColours">
-                COLOURS<span class="arrow">&#8679;</span>
-              </h2>
+              <h2 class="btnColours">COLOURS</h2>
               <div class="colours">
                 <form id="colorsFilter">
                   <input type="radio" id="allColors" name="color" value="all" />
@@ -119,7 +125,7 @@
               </div>
             </div>
             <div class="typesWrapper">
-              <h2>TYPE<span class="arrow">&#8679;</span></h2>
+              <h2>TYPE</h2>
               <div class="types">
                 <form id="typeFilter">
                   <input type="checkbox" name="type" id="allType" value="all" />
@@ -176,7 +182,7 @@
               </div>
             </div>
             <div class="collectionsWrapper">
-              <h2>COLLECTIONS<span class="arrow">&#8679;</span></h2>
+              <h2>COLLECTIONS</h2>
               <div class="collections">
                 <form id="collectionFilter">
                   <input
@@ -229,5 +235,58 @@
     </template>
 
     <script src="js/shop.js"></script>
+    <footer>
+      <nav>
+        <img src="assets/blue_silfen_logo.svg" class="footer_logo" />
+
+        <ul>
+          <h4>About</h4>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+        <div class="newsletter">
+          <div class="input-group">
+            <h4>Sign up for our newsletter</h4>
+            <input
+              class="input-group-field"
+              type="email"
+              placeholder="Email address"
+            />
+          </div>
+          <button class="footer_submit"><a href="#">Submit</a></button>
+        </div>
+        <ul>
+          <h4>Conditions</h4>
+          <li><a href="">Terms and conditions</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Returns</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+      </nav>
+      <ul class="footer_social_media">
+        <li>
+          <a target="_blank" href="https://www.instagram.com/silfenstudio/"
+            ><img src="assets/instagram.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.facebook.com/Silfenstudio"
+            ><img src="assets/facebook.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCwUsHwkGR4253v1iySaJJZw"
+            ><img src="assets/youtube.svg" alt=""
+          /></a>
+        </li>
+      </ul>
+      <p>
+        © Copyright | Silfen | Klareboderne 10, 1, DK-1115 København |
+        <strong>Phone:</strong> +45 20 51 89 23 |
+        <strong>Email:</strong> info@silfenstudio.com | CVR. 40912320
+      </p>
+    </footer>
   </body>
 </html>

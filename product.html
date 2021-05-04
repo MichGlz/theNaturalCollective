@@ -7,14 +7,16 @@
     <title>SILFEN shop sale</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/shop.css" />
-    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <meta name="robotos" content="noindex, nofollow" />
   </head>
   <body class="productSilfen">
     <div class="pageWrapper">
       <header>
         <div class="banner silfen">
           <ul class="banner">
-            <li>&#x2728; <a href="#">NEW! DISCOVER SILFEN PLAY</a></li>
+            <li>
+              &#x2728; <a href="silfenplay.html">NEW! DISCOVER SILFEN PLAY</a>
+            </li>
             <li>&#128666; <a href="#">FREE SHIPPING</a></li>
             <li>
               &#x1F449;
@@ -31,9 +33,15 @@
           <nav>
             <ul class="navigation">
               <li><a href="shop.html?all=true">SHOP</a></li>
-              <li><a href="">OUR STORY</a></li>
-              <li><a class="dinamicBrand" href="">SUSTAINABILITY</a></li>
-              <li><a href="">SILFENPLAY</a></li>
+              <li><a href="about.html">OUR STORY</a></li>
+              <li>
+                <a class="dinamicBrand" href="sustainability.html"
+                  >SUSTAINABILITY</a
+                >
+              </li>
+              <li class="silfenPlayLink">
+                <a href="silfenplay.html">SILFENPLAY</a>
+              </li>
               <li><a href="">CONTACT</a></li>
             </ul>
           </nav>
@@ -44,7 +52,22 @@
         </div>
       </header>
       <main class="productSilfen">
-        <a href="shop.html?all=true" class="btnBack">&#10094; Back</a>
+        <div class="uxHelp">
+          <a href="shop.html?all=true" class="btnBack"
+            ><span>&#10094;</span> Back</a
+          >
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="shop.html?all=true">ALL PRODUCTS <span>/</span></a>
+              </li>
+              <li>
+                <a href="#">COLLECTION <span>/</span></a>
+              </li>
+              <li><a href="#">PRODUCT NAME</a></li>
+            </ul>
+          </div>
+        </div>
 
         <section class="bigCard">
           <div class="image-info">
@@ -63,8 +86,8 @@
             <div class="infoWrapper">
               <div class="recycledIcon big"></div>
               <h2 class="productName">Silfen Bag</h2>
-              <p class="price"></p>
-              <p class="description"></p>
+              <p id="price" class="price"></p>
+              <p id="description" class="description"></p>
               <div class="colorsList"><h3>COLOURS:</h3></div>
               <button id="addToCart">ADD TO CART</button>
             </div>
@@ -108,5 +131,58 @@
     </template>
 
     <script src="js/product.js"></script>
+    <footer>
+      <nav>
+        <img src="assets/blue_silfen_logo.svg" class="footer_logo" />
+
+        <ul>
+          <h4>About</h4>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+        <div class="newsletter">
+          <div class="input-group">
+            <h4>Sign up for our newsletter</h4>
+            <input
+              class="input-group-field"
+              type="email"
+              placeholder="Email address"
+            />
+          </div>
+          <button class="footer_submit"><a href="#">Submit</a></button>
+        </div>
+        <ul>
+          <h4>Conditions</h4>
+          <li><a href="">Terms and conditions</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Returns</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+      </nav>
+      <ul class="footer_social_media">
+        <li>
+          <a target="_blank" href="https://www.instagram.com/silfenstudio/"
+            ><img src="assets/instagram.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.facebook.com/Silfenstudio"
+            ><img src="assets/facebook.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCwUsHwkGR4253v1iySaJJZw"
+            ><img src="assets/youtube.svg" alt=""
+          /></a>
+        </li>
+      </ul>
+      <p>
+        © Copyright | Silfen | Klareboderne 10, 1, DK-1115 København |
+        <strong>Phone:</strong> +45 20 51 89 23 |
+        <strong>Email:</strong> info@silfenstudio.com | CVR. 40912320
+      </p>
+    </footer>
   </body>
 </html>
