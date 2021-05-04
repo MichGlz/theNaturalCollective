@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styleLasse.css" />
+  </head>
+  <body>
+    <main>
+      <template id="product-template">
+        <article>
+          <h2>NAME</h2>
+          <figure>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Antidrroga_shoes.jpg/128px-Antidrroga_shoes.jpg"
+              alt=""
+            />
+            <!-- <figcaption>PRODUCTDESCRIPTION</figcaption> -->
+          </figure>
+
+          <p>PRICE</p>
+          <!-- <button data-id="id-">Add item</button> -->
+          <button>Add item</button>
+        </article>
+      </template>
+      <section class="products">
+        <!--  <article>
+          <h2>NAME</h2>
+          <figure>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Antidrroga_shoes.jpg/128px-Antidrroga_shoes.jpg"
+              alt=""
+            />
+          </figure>
+          <figcaption>PRODUCTDESCRIPTION</figcaption>
+          <p>PRICE</p>
+          <button>Add item</button>
+        </article>z
+        <article>
+          <h2>NAME</h2>
+          <figure>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Antidrroga_shoes.jpg/128px-Antidrroga_shoes.jpg"
+              alt=""
+            />
+          </figure>
+          <figcaption>PRODUCTDESCRIPTION</figcaption>
+          <p>PRICE</p>
+          <button>Add item</button>
+        </article>
+        <article>
+          <h2>NAME</h2>
+          <figure>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Antidrroga_shoes.jpg/128px-Antidrroga_shoes.jpg"
+              alt=""
+            />
+          </figure>
+          <figcaption>PRODUCTDESCRIPTION</figcaption>
+          <p>PRICE</p>
+          <button>Add item</button>
+        </article>
+        <article>
+          <h2>NAME</h2>
+          <figure>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Antidrroga_shoes.jpg/128px-Antidrroga_shoes.jpg"
+              alt=""
+            />
+          </figure>
+          <figcaption>PRODUCTDESCRIPTION</figcaption>
+          <p>PRICE</p>
+          <button>Add item</button>
+        </article> -->
+      </section>
+      <template id="cart-item-template">
+        <div class="cart-item">
+          <label for="fid-">NAME</label>
+          <button class="minus" type="button">-</button>
+          <input type="number" name="NAME-" id="fid-" min="0" max="20" />
+          <button class="plus" type="button">+</button>
+          <p class="price-row">DKK<span></span></p>
+          <p class="price-each">DKK<span></span> each</p>
+        </div>
+      </template>
+      <aside class="cart">
+        <h3>Shopping Cart</h3>
+        <form>
+          <div class="cart-content">
+            <h4>THE CART IS EMPTY</h4>
+          </div>
+          <!-- .END .cart-content-->
+          <button type="submit">Checkout & pay</button>
+        </form>
+      </aside>
+    </main>
+    <footer>
+      <h4>Image credit</h4>
+      <a
+        title="Antidrroga, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+        href="https://commons.wikimedia.org/wiki/File:Antidrroga_shoes.jpg"
+        ><img
+          width="128"
+          alt="Antidrroga shoes"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Antidrroga_shoes.jpg/128px-Antidrroga_shoes.jpg"
+      /></a>
+    </footer>
+    <script src="scriptLasse.js"></script>
+  </body>
+</html>

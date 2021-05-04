@@ -73,7 +73,7 @@ aside {
   /* transform: translateY(-100%); */
 }
 
-label {
+.shop label {
   display: block;
   margin-bottom: 1rem;
   font-family: var(--primaryFont);
@@ -86,7 +86,7 @@ label {
   cursor: pointer;
 }
 
-label::before {
+.shop label::before {
   content: "";
   height: 20px;
   width: 20px;

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SILFEN shop sale</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="styleLasse.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body class="productSilfen">
+    <div class="pageWrapper">
+      <header>
+        <div class="banner silfen">
+          <ul class="banner">
+            <li>&#x2728; <a href="#">NEW! DISCOVER SILFEN PLAY</a></li>
+            <li>&#128666; <a href="#">FREE SHIPPING</a></li>
+            <li>
+              &#x1F449;
+              <a href="#">GET 15% OFF - SIGN UP TO OUR NEWSLETTER</a> &#x1F448;
+            </li>
+          </ul>
+        </div>
+        <div class="navwrapper">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="assets/silfen_logo.svg" alt="logo"
+            /></a>
+          </div>
+          <nav>
+            <ul class="navigation">
+              <li><a href="shop.html?all=true">SHOP</a></li>
+              <li><a href="">OUR STORY</a></li>
+              <li><a class="dinamicBrand" href="">SUSTAINABILITY</a></li>
+              <li><a href="">SILFENPLAY</a></li>
+              <li><a href="">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="search-cart">
+            <a href="search.html"><img src="assets/search.svg" alt="icon" /></a>
+
+            <a class="cartIcon" href=""
+              ><img src="assets/cart.svg" alt="icon"
+            /></a>
+            <!---start dropdown cart---->
+            <div class="cart">
+              <h3>Shopping Cart</h3>
+              <form>
+                <div class="cart-content">
+                  <h4>THE CART IS EMPTY</h4>
+                </div>
+                <!-- .END .cart-content-->
+                <button id="checkout-pay" type="button">CHECKOUT & PAY</button>
+              </form>
+            </div>
+            <!---end dropdown cart---->
+            <div class="cartItemsCounter"><p></p></div>
+          </div>
+        </div>
+      </header>
+      <main class="productSilfen">
+        <a href="shop.html?all=true" class="btnBack">&#10094; Back</a>
+
+        <section class="bigCard">
+          <div class="image-info">
+            <div class="image-saleIcon">
+              <div class="saleIcon big"><h3>SALE</h3></div>
+              <div class="imageContainerBig">
+                <div class="sideBtn left"></div>
+                <img
+                  src="assets/silfen_s_frame.svg"
+                  alt="logo"
+                  loading="lazy"
+                />
+                <div class="sideBtn right"></div>
+              </div>
+            </div>
+            <div class="infoWrapper">
+              <div class="recycledIcon big"></div>
+              <h2 class="productName">Silfen Bag</h2>
+              <p class="price"></p>
+              <p class="description"></p>
+              <div class="colorsList"><h3>COLOURS:</h3></div>
+              <button id="addToCart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="outerContainerMiniPics">
+            <div class="containerMiniPics">
+              <div class="miniPic">
+                <img src="assets/silfen_s_frame.svg" alt="logo" />
+              </div>
+              <div class="miniPic">
+                <img src="assets/silfen_s_frame.svg" alt="logo" />
+              </div>
+              <div class="miniPic">
+                <img src="assets/silfen_s_frame.svg" alt="logo" />
+              </div>
+              <div class="miniPic">
+                <img src="assets/silfen_s_frame.svg" alt="logo" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="productListOuterContainer">
+          <div class="productListContainer"></div>
+        </div>
+      </main>
+
+      <footer></footer>
+    </div>
+
+    <template class="productSmallCard">
+      <div class="smallCardContainer">
+        <a class="linkProduct" href=""></a>
+        <section class="smallCard">
+          <div class="saleIcon"><h3>SALE</h3></div>
+          <div class="imageContainer"><img src="" alt="" loading="lazy" /></div>
+          <div class="recycledIcon"></div>
+          <h2 class="productName"></h2>
+          <p class="price"></p>
+        </section>
+      </div>
+    </template>
+    <template id="cart-item-template">
+      <div class="cart-item">
+        <label for="fid-">NAME</label>
+        <div class="plus-minus">
+          <button class="minus" type="button">-</button>
+          <input type="number" name="NAME-" id="fid-" min="0" max="20" />
+          <button class="plus" type="button">+</button>
+        </div>
+        <p class="price-row">DKK<span></span></p>
+        <p class="price-each">DKK<span></span> each</p>
+      </div>
+    </template>
+
+    <script src="scriptLasse.js"></script>
+  </body>
+</html>

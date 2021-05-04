@@ -1,0 +1,99 @@
+.cart {
+  position: absolute;
+  background-color: white;
+  border: solid 1px #7bafd4;
+  width: auto;
+  min-width: 250px;
+  height: auto;
+  min-height: 100px;
+  top: 30px;
+  right: 0;
+  padding: 2rem;
+  font-family: "Roboto", sans-serif;
+  display: none;
+  pointer-events: none;
+}
+
+.cartIcon:hover + .cart,
+.cart:hover {
+  display: block;
+  pointer-events: auto;
+}
+
+.cart form {
+  margin-top: 1rem;
+}
+
+.cart-item + .cart-item {
+  margin-top: 1rem;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s background-color;
+}
+button:hover {
+  background-color: yellowgreen;
+}
+
+/* hide built-in spin buttons on the number type - https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+/* END built-in spin hide */
+
+input[type="number"] {
+  display: inline;
+  text-align: center;
+  width: 30px;
+  font-size: 1.2rem;
+}
+.plus,
+.minus {
+  width: 20px;
+}
+#checkout-pay {
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+}
+.cart-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart button {
+  border: none;
+  background-color: #7bafd4;
+  color: white;
+  font-size: 1.2rem;
+}
+.plus-minus {
+  display: flex;
+  align-items: center;
+}
+
+.cartItemsCounter {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: tomato;
+  color: white;
+  border-radius: 50%;
+  font-family: "Manrope", sans-serif;
+  top: -15px;
+  right: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hideCartCounter {
+  opacity: 0;
+}
