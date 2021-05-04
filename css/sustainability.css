@@ -51,17 +51,63 @@ p {
   margin-top: 50px;
   max-width: 100%;
 }
+
+.value_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.home_values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  /* align-items: center; */
+  /* margin: 4vw 0;
+ */
+}
+
+.home_values div {
+  margin: 3em 1.5em;
+  width: 20%;
+  text-align: center;
+  line-height: 2;
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 2em; */
+}
+
+h3 {
+  font-family: "Roboto";
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+}
+
+.home_values img {
+  max-width: 50%;
+  max-height: 80px;
+}
+
 .recycled_h2 {
   margin-left: 200px;
 }
-
 .recycled_bags {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.recycled_bags div {
+  display: flex;
+  width: 20%;
+  margin: 2em 1em;
+  flex-direction: column;
 }
 
 .recycled {
@@ -82,6 +128,7 @@ p {
 
 .recycled_name {
   font-weight: bolder;
+  font-size: 1.2em;
 }
 
 .recycled_text {
@@ -115,4 +162,48 @@ button {
   font-family: var(--primaryFont);
   font-size: 1.3rem;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .recycled_h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .recycled_text {
+    text-align: center;
+    margin-left: 0;
+    width: 50%;
+    margin-top: 1.5em;
+  }
+
+  .recycled_collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .recycled_bags {
+    flex-direction: column;
+    align-items: center;
+  }
+  .recycled_bags div {
+    width: 40%;
+    margin: 2em 0;
+  }
+  .principles_svg {
+    display: none;
+  }
+  .principles_h3 {
+    display: none;
+  }
+
+  .home_values div {
+    width: 30%;
+  }
+  .value_wrapper h2 {
+    margin-top: 0;
+  }
 }
