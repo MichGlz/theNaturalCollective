@@ -114,6 +114,11 @@ ul.navigation a {
   color: black;
   font-size: 110%;
 }
+
+ul.navigation .silfenPlayLink a {
+  color: var(--silfenplayGreen);
+  font-weight: 500;
+}
 .search-cart {
   width: 8%;
   display: flex;
