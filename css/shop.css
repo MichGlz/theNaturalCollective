@@ -372,6 +372,7 @@ main.productSilfen {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 5em;
 }
 
 .image-saleIcon {
@@ -540,7 +541,6 @@ div.selected {
   width: 300%;
 }
 .btnBack {
-  position: fixed;
   left: 8rem;
   top: 180px;
   font-size: 1.2rem;
@@ -555,6 +555,33 @@ div.selected {
 .btnBack:hover {
   font-weight: lighter;
   font-size: 1.3rem;
+}
+.uxHelp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  margin-left: -6em;
+}
+
+.breadcrumbs ul {
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumbs ul li a {
+  color: black;
+  font-family: var(--secondaryFont);
+  margin: 0 0.3em;
+}
+
+.breadcrumbs ul li a span {
+  margin-left: 0.3em;
 }
 
 @media screen and (max-width: 1500px) {
