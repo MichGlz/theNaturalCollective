@@ -22,8 +22,10 @@ p {
 
 .intro_p {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   margin-top: 20px;
+  margin: auto;
 }
 .intro {
   margin: auto;
@@ -72,17 +74,20 @@ p {
 
 .recycled_name {
   font-weight: bolder;
+  margin-bottom: 5px;
 }
 
 .recycled_text {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  margin-top: 20px;
+  max-width: 530px;
+  /* margin: auto;
+  text-align: center; */
+  text-align: right;
+  margin-top: 50px;
+  margin-left: 50%;
 }
 .recycled_button {
   display: block;
-  margin: auto;
+  margin-left: 67%;
   margin-top: 40px;
   padding: 10px;
   background-color: var(--silfenBlue);

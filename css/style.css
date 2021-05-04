@@ -25,6 +25,10 @@ header {
   background-color: white;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /*--------star banner-----*/
 
 div.banner {
@@ -126,6 +130,104 @@ ul.navigation a {
 
 .silfen {
   background-color: var(--silfenBlue);
+}
+
+header .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+
+header .menu-icon .nav-icon {
+  background: #00425c;
+  display: block;
+  height: 1.5px;
+  width: 30px;
+  position: relative;
+
+  transition: background 0.2s ease-out;
+}
+
+header .menu-icon .nav-icon:before {
+  background: #00425c;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 9px;
+  transition: all 0.2s ease-out;
+}
+
+header .menu-icon .nav-icon:after {
+  background: #00425c;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -9px;
+  transition: all 0.2s ease-out;
+}
+
+header .menu-btn {
+  display: none;
+}
+
+header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+  text-align: left;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* MEDIA QUERIES FOR HEADER */
+@media (max-width: 1300px) {
+  ul.navigation {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  header .navigation {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  header .menu-icon {
+    display: none;
+  }
+
+  .logo {
+    margin: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  header .navigation {
+    display: none;
+  }
 }
 
 /*--------- footer ------------*/
