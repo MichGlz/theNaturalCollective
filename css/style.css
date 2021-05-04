@@ -230,5 +230,10 @@ footer img {
   footer nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter {
+    margin: 4em 0;
   }
 }
