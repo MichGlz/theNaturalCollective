@@ -191,10 +191,6 @@ header .menu-btn {
   header .menu-icon {
     display: none;
   }
-
-  .logo {
-    margin: auto;
-  }
 }
 
 @media (max-width: 1000px) {
@@ -204,6 +200,10 @@ header .menu-btn {
 
   div.banner {
     display: none;
+  }
+
+  .logo {
+    margin: auto;
   }
 
   ul.navigation {
