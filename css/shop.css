@@ -688,6 +688,12 @@ div.selected {
     display: none;
   }
 }
+
+header input,
+header label {
+  display: none;
+}
+
 /*-------------path animation----------*/
 /* .locura {
   height: 100vh;
