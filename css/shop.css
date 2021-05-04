@@ -220,6 +220,10 @@ input {
   text-align: left;
 }
 
+.productListOuterContainer .productListContainer {
+  width: min(1600px, 81vw);
+}
+
 .productListContainer {
   width: min(1600px, 70vw);
   margin-left: auto;
@@ -414,7 +418,7 @@ main.productSilfen {
 #description {
   font-size: 1em;
   line-height: 1.8em;
-  margin-top: 3em 0;
+  margin: 3em 0;
 }
 p.description,
 .bigCard .price {
@@ -426,6 +430,7 @@ p.description,
 .colorsList {
   display: flex;
   align-items: center;
+  margin-bottom: 3em;
 }
 
 .colorsList > * + * {
@@ -493,7 +498,7 @@ div.selected {
 }
 
 .productSilfen .productListContainer > * {
-  transform: scale(0.6);
+  transform: scale(0.9);
 }
 
 .containerMiniPics {
@@ -536,12 +541,15 @@ div.selected {
 }
 .btnBack {
   position: fixed;
-  left: 3rem;
+  left: 8rem;
   top: 180px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: var(--secondaryFont);
   color: black;
   text-decoration-line: none;
+}
+.btnBack span {
+  margin-right: 0.3em;
 }
 
 .btnBack:hover {
