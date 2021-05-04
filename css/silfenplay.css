@@ -211,7 +211,10 @@ button {
   padding: 1.5em 2em;
   color: white;
 }
-
+button a {
+  color: white;
+  text-decoration: none;
+}
 /* 
 .sp_forth {
   background: rgba(123, 175, 212, 0.25);
