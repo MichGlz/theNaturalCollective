@@ -102,7 +102,8 @@ ul.banner li:nth-child(3) {
 }
 
 .navwrapper nav {
-  width: 50%;
+  width: 60%;
+  padding-right: 20px;
 }
 
 ul.navigation {
@@ -169,7 +170,7 @@ header .menu-btn {
 /* MEDIA QUERIES FOR HEADER */
 @media (max-width: 1300px) {
   ul.navigation {
-    width: 60%;
+    /* width: 60%; */
   }
 }
 
@@ -247,14 +248,15 @@ header .menu-btn {
     transition: all 0.2s ease-out;
   }
 
-  header .menu-btn:checked ~ .navigation {
+  header .menu-btn:checked ~ nav .navigation {
     max-height: 240px;
     text-align: left;
     display: flex;
     flex-direction: column;
     position: absolute;
     margin: 0;
-    margin-top: 260px;
+    top: 80px;
+    left: 50px;
     padding: 20px;
     background-color: white;
     gap: 20px;
@@ -364,7 +366,7 @@ footer img {
   width: 50px;
 }
 
-@media screen and (max-width: 850px) {
+/* @media screen and (max-width: 850px) {
   div.banner {
     all: unset;
     display: none;
@@ -388,4 +390,4 @@ footer img {
     margin: 4em 0;
     text-align: center;
   }
-}
+} */
