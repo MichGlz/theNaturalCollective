@@ -28,6 +28,13 @@ p {
   text-align: center;
 }
 
+.intro_p {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 20px;
+  margin: auto;
+}
 .intro {
   margin: auto;
   max-width: 600px;
@@ -130,29 +137,20 @@ h3 {
 
 .recycled_name {
   font-weight: bolder;
-  font-size: 1.2em;
+  margin-bottom: 5px;
 }
 
 .recycled_text {
-  text-align: left;
-  width: 35%;
-  margin: 1vw 0 3vw 15vw;
-}
-
-.recycled_price {
-  margin-top: 0em;
-}
-
-button {
-  background-color: #7bafd4;
-  border: lightblue;
-  border-radius: 2px;
-  padding: 1.5em 2em;
-  color: white;
+  max-width: 530px;
+  /* margin: auto;
+  text-align: center; */
+  text-align: right;
+  margin-top: 50px;
+  margin-left: 50%;
 }
 .recycled_button {
   display: block;
-  margin: auto;
+  margin-left: 67%;
   margin-top: 40px;
   background-color: var(--silfenBlue);
   border: 2px solid outset;
