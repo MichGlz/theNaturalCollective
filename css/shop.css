@@ -42,7 +42,8 @@ aside {
   grid-area: aside;
   height: 90vh;
   width: 350px;
-  padding: 2rem;
+  padding: 2rem 0 2rem 2rem;
+  margin-top: 6em;
 }
 
 .filter > div {
@@ -77,13 +78,16 @@ label {
   display: block;
   margin-bottom: 1rem;
   font-family: var(--primaryFont);
+  font-weight: 400;
+  letter-spacing: 0.05em;
   position: relative;
   text-align: left;
   margin-left: 30px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 2px;
   transition: 0.3s linear;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 label::before {
@@ -92,7 +96,8 @@ label::before {
   width: 20px;
   position: absolute;
   left: -30px;
-  border: solid 1px black;
+  border-radius: 2px;
+  border: solid 0.1px grey;
   transition: 0.2s linear;
 }
 
@@ -164,45 +169,55 @@ input {
 .types,
 .collections {
   padding: 1rem 0;
+  width: 60%;
 }
 
 #typeFilter {
   display: flex;
   flex-direction: column;
   font-family: var(--primaryFont);
-  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
-#typeFilter * + * {
+/* #typeFilter * + * {
   margin-top: 1rem;
-}
+} */
 
 #collectionFilter {
   display: flex;
   flex-direction: column;
   font-family: var(--primaryFont);
-  font-size: 1.2rem;
 }
 
-#collectionFilter * + * {
+/* #collectionFilter * + * {
   margin-top: 1rem;
-}
+} */
 
 .collectionsWrapper,
 .typesWrapper {
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 .colorsWrapper {
   padding-top: 2rem;
+}
+
+.colorsWrapper h2,
+.typesWrapper h2,
+.collectionsWrapper h2 {
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
 }
 
 /*--------end filter----------*/
 
 .filterName {
   margin-top: 2rem;
-  margin-left: 6rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-left: 1.4em;
   font-weight: lighter;
+  letter-spacing: 0.3em;
+  text-align: left;
 }
 
 .productListContainer {
@@ -222,19 +237,24 @@ input {
 }
 
 .smallCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: auto;
   padding: 2rem;
   background-color: white;
-  box-shadow: 5px 10px 15px rgba(110, 109, 109, 0.308);
+  box-shadow: 5px 10px 15px rgba(150, 150, 150, 0.233);
   font-family: var(--secondaryFont);
   text-align: left;
   transition: 0.2s;
   transform-origin: center;
+  text-transform: unset;
 }
 
 .smallCard p {
-  font-size: 120%;
+  font-size: 1.1em;
+  margin-top: 0.5em;
 }
 
 .smallCard h2 {
@@ -259,6 +279,7 @@ input {
 .imageContainer {
   width: 100%;
   margin-bottom: 2rem;
+  margin-left: 2.5em;
 }
 
 .imageContainer img {
