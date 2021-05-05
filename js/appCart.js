@@ -1,4 +1,7 @@
+localStorage.setItem("basket", "[]");
+
 let cartItems = Number(localStorage.getItem("cartItems"));
+
 let cartLenght = localStorage.getItem("basket").length;
 if (cartLenght < 3) {
   cartItems = 0;
