@@ -65,6 +65,13 @@ function showProduct(product) {
 
   localStorage.setItem(`"${product_name_local}"`, productLocal);
   console.log(localStorage);
+  btnEl = document.querySelector("#addToCart");
+  btnEl.dataset.id += product._id;
+  btnEl.addEventListener("click", () => {
+    // alert("hey");
+    // console.log(product);
+    CART.add(product);
+  });
 }
 
 /*------------others also bought-------------------------*/

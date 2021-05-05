@@ -1,8 +1,44 @@
-*{
-    box-sizing: border-box;
-    
+* {
+  box-sizing: border-box;
 }
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  padding-top: 150px;
+}
+section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  min-width: 360px;
+  min-height: 40vh;
+  background-color: lawngreen;
+}
+
+section + section {
+  margin-top: 2rem;
+}
+
+.cartStep1wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.breadCrombs {
+  width: 100%;
+  padding: 2rem 0;
+}
+.cart-shipping {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cart,
+.shipping {
+  width: 50%;
+  min-width: 350px;
 }
