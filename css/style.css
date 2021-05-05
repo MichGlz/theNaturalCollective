@@ -130,15 +130,14 @@ nav div:hover ul {
 
 .shop_hover_list li:hover {
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .SP_drop {
-  color: var(--silfenplayGreen);
+  color: var(--silfenplayGreen) !important;
 }
 
 .sale_drop {
-  color: tomato;
+  color: tomato !important;
 }
 
 ul.navigation li {
