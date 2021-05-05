@@ -12,3 +12,23 @@ document.querySelector(".persona h3").textContent = email;
 document.querySelector(
   ".persona p"
 ).innerHTML = `${street} ${city} <br> ${zipcode} ${country}`;
+const wrapperFormCart = document.querySelector(".cart-shipping");
+const nextBtn = document.querySelector(".buttonsWrapper .nextBtn");
+const formCC = document.querySelector(`form[name="CC"]`);
+console.log(formCC);
+nextBtn.addEventListener("click", confirm);
+
+function confirm() {
+  nextBtn.removeEventListener("click", confirm);
+  nextBtn.textContent = "CONFIRM";
+  nextBtn.classList.add("green");
+  wrapperFormCart.classList.add("greyFilter");
+  document.querySelector("#credit_card").value = "XXXX XXXX XXXX XXXX";
+  document.querySelector("#expDate").value = "-- --";
+  document.querySelector("#cvv").value = "---";
+  nextBtn.addEventListener("click", cleanBasket);
+}
+
+function cleanBasket() {
+  localStorage.setItem("basket", "[]");
+}

@@ -210,6 +210,7 @@ section + section {
 .nextBtn {
   background-color: black;
   color: white;
+  transition: 0.2s;
 }
 .backBtn {
   color: black;
@@ -249,4 +250,24 @@ section + section {
   width: 100%;
   font-family: var(--primaryFont);
   align-items: flex-start;
+}
+
+.cartPayBody .form-personalData {
+  min-height: 600px;
+  justify-content: space-around;
+  padding-bottom: 3rem;
+}
+
+.greyFilter {
+  filter: grayscale(1);
+}
+
+.green {
+  background-color: green;
+  transform: scale(1.2);
+}
+
+.green:hover {
+  background-color: rgb(4, 104, 4);
+  transform: scale(1.3);
 }
