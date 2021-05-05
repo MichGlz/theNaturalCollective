@@ -9,6 +9,8 @@ let newPrice;
 let endPoint;
 let urlFetch;
 
+let silfenPlayShop = false;
+
 let titles = [typeBag, colorBag, collectionBag];
 let inputValue = titles.join("");
 let headerShop = inputValue.toUpperCase();
@@ -76,7 +78,6 @@ function fetchProductFilter(e) {
 function showProductList(products) {
   //grab the template
   const template = document.querySelector("template.productSmallCard").content;
-
   products.forEach((product) => {
     //clone
     const copy = template.cloneNode(true);
@@ -100,6 +101,8 @@ function showProductList(products) {
     copy.querySelector("img").alt = product.product_name;
 
     //append
-    document.querySelector(".productListContainer").appendChild(copy);
+    if (!product.silfen_play) {
+      document.querySelector(".productListContainer").appendChild(copy);
+    }
   });
 }

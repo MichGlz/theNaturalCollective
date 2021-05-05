@@ -7,6 +7,7 @@
     <title>SILFEN shop sale</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/appCart.css" />
     <meta name="robotos" content="noindex, nofollow" />
   </head>
   <body class="productSilfen">
@@ -62,7 +63,22 @@
           </nav>
           <div class="search-cart">
             <a href="search.html"><img src="assets/search.svg" alt="icon" /></a
-            ><a href=""><img src="assets/cart.svg" alt="icon" /></a>
+            ><a class="cartIcon" href="cart.html"
+              ><img src="assets/cart.svg" alt="icon"
+            /></a>
+            <!---start dropdown cart---->
+            <div class="cart">
+              <h3>Shopping Cart</h3>
+              <form>
+                <div class="cart-content">
+                  <h4>THE CART IS EMPTY</h4>
+                </div>
+                <!-- .END .cart-content-->
+                <button id="checkout-pay" type="button">CHECKOUT & PAY</button>
+              </form>
+            </div>
+            <!---end dropdown cart---->
+            <div class="cartItemsCounter"><p></p></div>
           </div>
         </div>
       </header>
@@ -144,8 +160,19 @@
         </section>
       </div>
     </template>
+    <template id="cart-item-template">
+      <div class="cart-item">
+        <label for="fid-">NAME</label>
+        <div class="plus-minus">
+          <button class="minus" type="button">-</button>
+          <input type="number" name="NAME-" id="fid-" min="0" max="20" />
+          <button class="plus" type="button">+</button>
+        </div>
+        <p class="price-row">DKK<span></span></p>
+        <p class="price-each">DKK<span></span> each</p>
+      </div>
+    </template>
 
-    <script src="js/product.js"></script>
     <footer>
       <nav>
         <img src="assets/blue_silfen_logo.svg" class="footer_logo" />
@@ -199,5 +226,8 @@
         <strong>Email:</strong> info@silfenstudio.com | CVR. 40912320
       </p>
     </footer>
+
+    <script src="js/product.js"></script>
+    <script src="js/appCart.js"></script>
   </body>
 </html>

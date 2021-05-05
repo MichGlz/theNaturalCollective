@@ -7,9 +7,10 @@
     <title>SILFEN</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/appCart.css">
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
   </head>
-  <body>
+  <body class="cartBody">
     <header>
       <div class="banner silfen">
         <ul class="banner">
@@ -62,8 +63,55 @@
         </div>
       </div>
     </header>
-    <section class="products"></section>
-    <aside class="cart"></aside>
+
+    <main>
+<section class="cartStep1">
+<div class="cartStep1wrapper">
+  <div class="breadCrombs">
+     <p> <span>Cart ></span> <span>Information ></span> <span>Payment</span> </p>
+  </div>
+  <div class="cart-shipping">
+    <div class="cart-page">
+
+    </div>
+    <div class="shipping">
+      <div class="subtotal">
+        <p>Sub Total</p>
+        <p>450 DKK</p>
+      </div>
+      <form class="form-shipping" action="">
+        <h2></h2>
+        <label for="">
+          <h3>Standard Delivery <span>Free</span></h3>
+          <p>Order will be delivered between 3 - 5 business days</p>
+          <input type="radio" name="shipping" id="standard" value="0"></label>
+        <label for="">
+          <h3>Next Day Delivery <span>49 DKK</span></h3>
+          <p>Order will be delivered between 3 - 5 business days</p>
+          <input type="radio" name="shipping" id="nextDay"  value="49"></label>
+      </form>
+      <div class="total">
+        <p>TOTAL</p>
+        <p>450 DKK</p>
+      </div>
+      <button>PROCEED TO CHECKOUT</button> 
+    </div>
+  </div>
+</div>
+</section>
+<section class="cartStep2">
+  
+</section>
+<section class="cartStep3">
+  
+</section>
+<section class="cartStep4">
+  
+</section>
+
+
+    </main>
+    
 
       <footer></footer>
     </div>
@@ -71,20 +119,35 @@
       <p></p>
     </div>
 
-    <template id="productmatch">
-      <article class="productMatch">
-        <a class="linkProduct" href=""> </a>
-        <div class="productmatchImg">
+    
+
+    <template id="cart-item-template-page">
+      <div class="cart-item-page">
+        
+        <div class="productCartImg">
           <img src="" alt="" />
         </div>
-        <div class="infoProductMatch">
-          <h2 class="productName"></h2>
-          <p class="price"></p>
-          <p class="description"></p>
-        </div>
-      </article>
+        <div class="infoProductCart">
+
+          <div class="closeWrapper"><botton class="deletItem" type="botton">&#9587;</botton></div>
+
+        <label for="fid-">NAME</label>
+                
+        <p class="price-row">DKK <span></span></p>
+        
+        <p class="price-each">DKK <span></span> each</p>
+
+        <div class="plus-minus">
+          <button class="minus" type="button">-</button>
+          <input type="number" name="NAME-" id="fid-" min="0" max="20" />
+          <button class="plus" type="button">+</button>
+          </div>
+
+         </div>
+      </div>
     </template>
 
-    <script src="js/search.js"></script>
+
+    <script src="js/cart.js"></script>
   </body>
 </html>

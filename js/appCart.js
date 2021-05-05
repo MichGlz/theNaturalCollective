@@ -1,8 +1,13 @@
 let cartItems = Number(localStorage.getItem("cartItems"));
+let cartLenght = localStorage.getItem("basket").length;
+if (cartLenght < 3) {
+  cartItems = 0;
+}
+console.log(cartLenght);
 
 document.querySelector(".cartItemsCounter").classList.add("hideCartCounter");
 
-console.log(localStorage);
+// console.log(localStorage);
 
 const CART = {
   KEY: "basket",
@@ -99,7 +104,14 @@ const CART = {
         });
 
         const priceEl = itemcopy.querySelector(".price-each span");
-        priceEl.textContent = element.price;
+        priceEl.textContent = Number(element.price) * Number(element.qty);
+        if (element.sale) {
+          priceEl.textContent = Math.floor(
+            Number(element.price) *
+              (1 - Number(element.discount) / 100) *
+              Number(element.qty)
+          );
+        }
 
         cartcontentEl.appendChild(itemcopy);
       });
