@@ -93,6 +93,10 @@ function fetchSmallCards() {
       var i;
       for (i = 0; i < 4; i++) {
         y = Math.floor(Math.random() * x);
+        while (response[y].silfen_play) {
+          y = Math.floor(Math.random() * x);
+          console.log(response[y].silfen_play);
+        }
         productsArray.push(response[y]);
         // console.log(response[y]);
       }

@@ -1,3 +1,11 @@
+:root {
+  --silfenBlue: #7bafd4;
+  --silfenplayYellow: #edff00;
+  --silfenplayGreen: #aed5b2;
+  --primaryFont: "Roboto", sans-serif;
+  --secondaryFont: "Manrope", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +22,7 @@ section {
   width: 60%;
   min-width: 360px;
   min-height: 40vh;
-  background-color: lawngreen;
+  /* background-color: lawngreen; */
 }
 
 section + section {
@@ -30,15 +38,56 @@ section + section {
 .breadCrombs {
   width: 100%;
   padding: 2rem 0;
+  font-family: var(--secondaryFont);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
 }
+
 .cart-shipping {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.cart,
+.cart-page,
 .shipping {
   width: 50%;
   min-width: 350px;
+}
+
+.cart-item-page {
+  width: 100%;
+  display: flex;
+  padding: 0 1rem;
+  font-family: var(--primaryFont);
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-item-page + .cart-item-page {
+  margin-top: 1.5rem;
+}
+
+.productCartImg {
+  width: 25%;
+  align-self: flex-end;
+  box-shadow: 0 0 10px 0 lightgray;
+}
+
+.infoProductCart {
+}
+
+.cart-item-page label {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.closeWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.deletItem {
+  pointer-events: auto;
+  cursor: pointer;
 }
