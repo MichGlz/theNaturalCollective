@@ -7,6 +7,7 @@
     <title>SILFEN shop sale</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/appCart.css" />
     <meta name="robotos" content="noindex, nofollow" />
   </head>
   <body class="productSilfen">
@@ -25,14 +26,29 @@
           </ul>
         </div>
         <div class="navwrapper">
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"
+            ><span class="nav-icon"></span
+          ></label>
           <div class="logo">
             <a href="index.html"
               ><img src="assets/silfen_logo.svg" alt="logo"
             /></a>
           </div>
-          <nav>
+          <nav class="burgernav">
             <ul class="navigation">
-              <li><a href="shop.html?all=true">SHOP</a></li>
+              <div class="shop_nav">
+                <li>
+                  <a class="activeLink" href="shop.html?all=true">SHOP</a>
+                  <ul class="shop_hover_list">
+                    <li>All Products</li>
+                    <li>New Arrivals</li>
+                    <li>Bestsellers</li>
+                    <li class="SP_drop">SILFEN Play</li>
+                    <li class="sale_drop">Sale</li>
+                  </ul>
+                </li>
+              </div>
               <li><a href="about.html">OUR STORY</a></li>
               <li>
                 <a class="dinamicBrand" href="sustainability.html"
@@ -47,7 +63,22 @@
           </nav>
           <div class="search-cart">
             <a href="search.html"><img src="assets/search.svg" alt="icon" /></a
-            ><a href=""><img src="assets/cart.svg" alt="icon" /></a>
+            ><a class="cartIcon" href="cart.html"
+              ><img src="assets/cart.svg" alt="icon"
+            /></a>
+            <!---start dropdown cart---->
+            <div class="cart">
+              <h3>Shopping Cart</h3>
+              <form>
+                <div class="cart-content">
+                  <h4>THE CART IS EMPTY</h4>
+                </div>
+                <!-- .END .cart-content-->
+                <button id="checkout-pay" type="button">CHECKOUT & PAY</button>
+              </form>
+            </div>
+            <!---end dropdown cart---->
+            <div class="cartItemsCounter"><p></p></div>
           </div>
         </div>
       </header>
@@ -64,7 +95,7 @@
               <li>
                 <a href="#">COLLECTION <span>/</span></a>
               </li>
-              <li><a href="#">PRODUCT NAME</a></li>
+              <li><a class="activeLink" href="#">PRODUCT NAME</a></li>
             </ul>
           </div>
         </div>
@@ -110,6 +141,7 @@
           </div>
         </section>
         <div class="productListOuterContainer">
+          <div class="related"><p>RELATED PRODUCTS</p></div>
           <div class="productListContainer"></div>
         </div>
       </main>
@@ -129,8 +161,19 @@
         </section>
       </div>
     </template>
+    <template id="cart-item-template">
+      <div class="cart-item">
+        <label for="fid-">NAME</label>
+        <div class="plus-minus">
+          <button class="minus" type="button">-</button>
+          <input type="number" name="NAME-" id="fid-" min="0" max="20" />
+          <button class="plus" type="button">+</button>
+        </div>
+        <p class="price-row">DKK<span></span></p>
+        <p class="price-each">DKK<span></span> each</p>
+      </div>
+    </template>
 
-    <script src="js/product.js"></script>
     <footer>
       <nav>
         <img src="assets/blue_silfen_logo.svg" class="footer_logo" />
@@ -149,7 +192,9 @@
               placeholder="Email address"
             />
           </div>
-          <button class="footer_submit"><a href="#">Submit</a></button>
+          <button id="footer_submit" class="footer_submit">
+            <a href="#">Submit</a>
+          </button>
         </div>
         <ul>
           <h4>Conditions</h4>
@@ -184,5 +229,8 @@
         <strong>Email:</strong> info@silfenstudio.com | CVR. 40912320
       </p>
     </footer>
+
+    <script src="js/product.js"></script>
+    <script src="js/appCart.js"></script>
   </body>
 </html>
