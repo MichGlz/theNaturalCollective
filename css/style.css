@@ -113,6 +113,28 @@ ul.navigation {
   justify-content: space-between;
 }
 
+.shop_hover_list {
+}
+
+.navigation ul {
+  display: none;
+}
+
+nav div:hover ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  gap: 10px;
+  margin-left: -30px;
+  font-family: var(--secondaryFont);
+}
+
+.shop_hover_list li:hover {
+  text-decoration: underline;
+}
+
 ul.navigation li {
   list-style: none;
   display: inline-block;
