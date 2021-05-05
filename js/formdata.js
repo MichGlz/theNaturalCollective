@@ -32,4 +32,5 @@ function confirm() {
 function cleanBasket() {
   localStorage.setItem("basket", "[]");
   localStorage.setItem("cartItems", "0");
+  location.href = `thankyou.html`;
 }

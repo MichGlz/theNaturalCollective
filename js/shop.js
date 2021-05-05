@@ -11,6 +11,14 @@ let urlFetch;
 
 let silfenPlayShop = false;
 
+if (collectionBag == "Silfenplay") {
+  silfenPlayShop = true;
+  document.querySelector("body").classList.add("silfenPlay");
+  document.querySelector(".logo img").src = "assets/silfenplayLogo.svg";
+}
+
+console.log(silfenPlayShop);
+
 let titles = [typeBag, colorBag, collectionBag];
 let inputValue = titles.join("");
 let headerShop = inputValue.toUpperCase();
@@ -102,7 +110,14 @@ function showProductList(products) {
     copy.querySelector("img").alt = product.product_name;
 
     //append
-    if (!product.silfen_play) {
+    if (!silfenPlayShop) {
+      if (!product.silfen_play) {
+        document.querySelector(".productListContainer").appendChild(copy);
+      }
+    }
+    if (silfenPlayShop) {
+      console.log("dentrodelif");
+
       document.querySelector(".productListContainer").appendChild(copy);
     }
   });

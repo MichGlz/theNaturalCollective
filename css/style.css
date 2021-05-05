@@ -184,6 +184,12 @@ header .menu-btn {
 }
 
 /*------- end navigation ------------*/
+.silfenPlay .logo {
+  width: 15%;
+}
+.silfenPlay .logo img {
+  width: 100%;
+}
 
 .silfenplay {
   background-color: var(--silfenplayGreen);

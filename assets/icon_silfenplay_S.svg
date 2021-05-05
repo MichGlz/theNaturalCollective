@@ -1,4 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="109.6mm" height="147.97mm" viewBox="0 0 310.67 419.44">
+<defs>
+<style type="text/css">
+.st0{fill:none;}
+#silfen_play_s{
+fill:#aed5b221;
+transform-origin:center;
+animation-name: rotating;
+animation-duration:60s;
+animation-iteration-count:1 ;
+animation-timing-function: linear;
+animation-fill-mode: forwards; 
+}
+
+
+#logoSVG{
+animation-name: appear;
+animation-duration: 5s;
+animation-iteration-count:12 ;
+animation-timing-function: linear;
+animation-fill-mode: forwards;  
+}
+
+@keyframes appear {
+0%,100% {
+opacity:.3;
+}
+
+
+50% {
+    opacity:.8;}
+
+}
+
+@keyframes rotating {
+0% {
+transform:rotate(0deg);
+}
+
+100% {
+transform:rotate(360deg);
+}
+}
+</style>
+<script type="text/javascript">
+
+var tiempo= Math.floor(Math.random() * 10)+1+"s";
+document.getElementById("logoSVG").style.animationDelay = tiempo;
+
+
+</script>
+
+</defs>
   <g id="silfen_play_s">
     <path d="M310.67,210.74V404c0,9.5-5.82,15.43-15.27,15.44q-140.11,0-280.23,0A14.82,14.82,0,0,1,0,404.25q0-194,0-388C0,6.67,6.83,0,16.57,0H295.3c9,0,15.36,6.4,15.36,15.49Q310.68,113.12,310.67,210.74ZM146.52,143.83c.77-3.22,1.73-5.7,1.91-8.24.35-4.89,2.78-5.88,7.41-5.85,41.95.19,83.91.11,125.87.11h5c0-31.08.49-61.46-.27-91.82-.25-10.15-5.55-17.13-16.25-17.13H40.46c-8.6,0-16.32,5.11-18.33,13.52-1.18,4.9-.25,10.31-.22,15.5q.49,88.53,1,177.07c.05,9.77,0,19.53,0,29.62H164.3c-.57,2.9-1.1,5.45-1.57,8-.83,4.47-3,6.15-8,6.12-42-.26-83.92-.15-125.88-.15H23.17c-.14,1.27-.25,1.77-.24,2.26.32,36.55.57,73.11,1,109.66.13,10.33,9.53,19.81,19.35,20,22.24.39,44.49.91,66.74,1,51,.15,101.9,0,152.85.07a40,40,0,0,1,5.88.52,17.42,17.42,0,0,0,20-17.06c0-20.31.09-40.62,0-60.92q-.44-89.29-1-178.58c0-1.11-.13-2.23-.22-3.68Z"/>
   </g>

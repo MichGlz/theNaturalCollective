@@ -1,0 +1,53 @@
+:root {
+  --silfenBlue: #7bafd4;
+  --silfenplayYellow: #edff00;
+  --silfenplayGreen: #aed5b2;
+  --primaryFont: "Roboto", sans-serif;
+  --secondaryFont: "Manrope", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding-top: 120px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.wrapperFotoMsg {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.mensaje p {
+  background-color: white;
+  font-family: var(--primaryFont);
+  font-size: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+#takeme {
+  margin-top: 3rem;
+  font-family: var(--primaryFont);
+  display: block;
+  color: white;
+  padding: 1rem 2rem;
+  background-color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+#takeme:hover {
+  background-color: var(--silfenBlue);
+}

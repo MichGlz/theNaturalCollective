@@ -20,6 +20,12 @@ body.productSilfen {
   background-attachment: fixed;
 }
 
+body.silfenPlay {
+  background: url(../assets/icon_silfenplay_S.svg);
+  background-size: 200px;
+  background-attachment: fixed;
+}
+
 main {
   grid-area: main;
 }
@@ -102,7 +108,12 @@ aside {
   transition: 0.2s linear;
 }
 
-label[for="sale"]::before {
+label[for="sale"]::before,
+label[for="silfenplay"]::before {
+  display: none;
+}
+label[for="sale"],
+label[for="silfenplay"] {
   display: none;
 }
 
