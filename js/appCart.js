@@ -1,4 +1,6 @@
-localStorage.setItem("basket", "[]");
+if (!localStorage.getItem("basket")) {
+  localStorage.setItem("basket", "[]");
+}
 
 let cartItems = Number(localStorage.getItem("cartItems"));
 
