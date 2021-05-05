@@ -1,5 +1,6 @@
 let cartItems = Number(localStorage.getItem("cartItems"));
-
+let sub_total;
+let total_cart;
 const cartItemTemplete = `<template id="cart-item-template">
 <div class="cart-item">
   <label for="fid-">NAME</label>
@@ -197,23 +198,18 @@ const CART = {
           );
         }
 
-        const priceEleach2 = itemcopy2.querySelector(".price-each span");
-        priceEleach2.textContent = Number(element.price);
-        if (element.sale) {
-          priceEleach2.textContent = Math.floor(
-            Number(element.price) * (1 - Number(element.discount) / 100)
-          );
-        }
-
         itemcopy2.querySelector("img").src = element.image_url;
         itemcopy2.querySelector("img").alt = element.product_name;
         itemcopy2.querySelector("img").setAttribute("width", "100%");
 
         cartcontentEl.appendChild(itemcopy);
         cartcontentPage.appendChild(itemcopy2);
+
+        subtotal();
       });
     }
     logCartCounting();
+
     /*----countin items in cart---*/
     // document
     //   .querySelectorAll(`.cart form input[type="number"]`)
@@ -302,4 +298,23 @@ function logCartCounting() {
       .querySelector(".cartItemsCounter")
       .classList.remove("hideCartCounter");
   }
+}
+
+function subtotal() {
+  let x = 0;
+  let subTotal = document.querySelectorAll(".cart-page .price-row span");
+  subTotal.forEach((dkk) => {
+    x = x + Number(dkk.textContent);
+    console.log(x);
+  });
+  if (subTotal.length < 1) {
+    x = 0;
+  }
+  document.querySelector(".subtotalP").textContent = `${x} DKK`;
+  document.querySelector(".totalP").textContent = `${x} DKK`;
+  sub_total = x;
+  document.querySelector(".form-shipping").addEventListener("change", (e) => {
+    total_cart = sub_total + Number(e.target.value);
+    document.querySelector(".totalP").textContent = `${total_cart} DKK`;
+  });
 }
