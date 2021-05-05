@@ -25,6 +25,18 @@ section {
   /* background-color: lawngreen; */
 }
 
+.cart-shipping button {
+  border: none;
+  font-size: 1.2rem;
+  width: 35px;
+  color: white;
+  background-color: var(--silfenBlue);
+}
+
+.plus-minus input {
+  border: none;
+}
+
 section + section {
   margin-top: 2rem;
 }
@@ -50,8 +62,8 @@ section + section {
   flex-wrap: wrap;
 }
 
-.cart-page,
-.shipping {
+.shipping,
+.cart-page {
   width: 50%;
   min-width: 350px;
 }
@@ -76,6 +88,7 @@ section + section {
 }
 
 .infoProductCart {
+  min-width: px;
 }
 
 .cart-item-page label {
@@ -90,4 +103,19 @@ section + section {
 .deletItem {
   pointer-events: auto;
   cursor: pointer;
+}
+
+.shipping {
+  font-family: var(--secondaryFont);
+}
+
+.shipping h3 span {
+  color: gray;
+  font-weight: normal;
+}
+
+.shipping button {
+  margin-top: 2rem;
+  width: auto;
+  padding: 1rem 2.2rem;
 }
