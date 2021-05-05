@@ -25,6 +25,7 @@ if (allBags == "true") {
 }
 
 document.querySelector(".filterName").textContent = headerShop;
+
 document
   .querySelector(`input[value="${inputValue}"]`)
   .setAttribute("checked", "checked");

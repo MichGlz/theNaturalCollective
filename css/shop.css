@@ -102,6 +102,10 @@ aside {
   transition: 0.2s linear;
 }
 
+label[for="sale"]::before {
+  display: none;
+}
+
 input:checked + label {
   background: #7bafd475;
 }
