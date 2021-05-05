@@ -31,4 +31,5 @@ function confirm() {
 
 function cleanBasket() {
   localStorage.setItem("basket", "[]");
+  localStorage.setItem("cartItems", "0");
 }
