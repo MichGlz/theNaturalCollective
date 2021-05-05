@@ -281,6 +281,32 @@ input[type="email"] {
   margin-right: 2rem;
 }
 
+.related {
+  color: black;
+  font-family: var(--secondaryFont);
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-left: 9em;
+  padding-top: 4em;
+  letter-spacing: 0.1em;
+}
+
+.sortBy {
+  color: black;
+  font-family: var(--secondaryFont);
+  font-size: 1.2em;
+  text-align: right;
+  font-weight: 300;
+  padding-top: 4em;
+  margin-right: 11.4em;
+  letter-spacing: 0.1em;
+}
+
+.sortBy span {
+  transform: rotate(90deg);
+  font-size: 1.2em;
+}
+
 .youSave {
   margin-left: 2rem;
   color: crimson;

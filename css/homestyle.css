@@ -471,9 +471,13 @@ button {
   left: 0;
   display: none;
 }
+
+#blackout input {
+  margin-bottom: 1em;
+}
 #box {
   width: 500px;
-  height: 350px;
+  height: 375px;
   text-align: center;
   font-family: "Manrope", sans-serif;
   padding: 15px;

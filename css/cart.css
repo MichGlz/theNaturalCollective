@@ -19,9 +19,10 @@ main {
 section {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 60%;
   min-width: 360px;
   min-height: 40vh;
+  /* background-color: lawngreen; */
 }
 
 .cart-shipping button {

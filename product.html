@@ -39,7 +39,7 @@
             <ul class="navigation">
               <div class="shop_nav">
                 <li>
-                  <a href="shop.html?all=true">SHOP</a>
+                  <a class="activeLink" href="shop.html?all=true">SHOP</a>
                   <ul class="shop_hover_list">
                     <li>All Products</li>
                     <li>New Arrivals</li>
@@ -95,7 +95,7 @@
               <li>
                 <a href="#">COLLECTION <span>/</span></a>
               </li>
-              <li><a href="#">PRODUCT NAME</a></li>
+              <li><a class="activeLink" href="#">PRODUCT NAME</a></li>
             </ul>
           </div>
         </div>
@@ -141,6 +141,7 @@
           </div>
         </section>
         <div class="productListOuterContainer">
+          <div class="related"><p>RELATED PRODUCTS</p></div>
           <div class="productListContainer"></div>
         </div>
       </main>
@@ -191,7 +192,9 @@
               placeholder="Email address"
             />
           </div>
-          <button class="footer_submit"><a href="#">Submit</a></button>
+          <button id="footer_submit" class="footer_submit">
+            <a href="#">Submit</a>
+          </button>
         </div>
         <ul>
           <h4>Conditions</h4>

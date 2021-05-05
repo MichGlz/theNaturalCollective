@@ -35,6 +35,7 @@ input[type="search"] {
   border-radius: max(20px, 1.5vw);
   padding: 0 3rem;
   font-size: 1.5rem;
+  padding-left: 2.6em;
 }
 input[type="search"]:focus {
   border: solid 3px var(--silfenBlue);
@@ -47,12 +48,13 @@ input[type="search"]:focus {
   border: none;
   background-image: url(../assets/search.svg);
   background-repeat: no-repeat;
-  background-size: max(30px, 2vw);
+  background-size: max(25px, 0vw);
   background-position: center;
   width: max(5vw, 65px);
   height: max(40px, 3vw);
   top: 0;
   right: 0;
+  left: 0;
   border-radius: 0 1.5vw 1.5vw 0;
   cursor: pointer;
 }
