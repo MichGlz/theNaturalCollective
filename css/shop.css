@@ -211,6 +211,10 @@ input {
   letter-spacing: 0.1em;
 }
 
+input[type="email"] {
+  display: inline;
+}
+
 /*--------end filter----------*/
 
 .filterName {
