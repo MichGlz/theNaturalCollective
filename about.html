@@ -25,14 +25,29 @@
           </ul>
         </div>
         <div class="navwrapper">
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"
+            ><span class="nav-icon"></span
+          ></label>
           <div class="logo">
             <a href="index.html"
               ><img src="assets/silfen_logo.svg" alt="logo"
             /></a>
           </div>
-          <nav>
+          <nav class="burgernav">
             <ul class="navigation">
-              <li><a href="shop.html?all=true">SHOP</a></li>
+              <div class="shop_nav">
+                <li>
+                  <a href="shop.html?all=true">SHOP</a>
+                  <ul class="shop_hover_list">
+                    <li>All Products</li>
+                    <li>New Arrivals</li>
+                    <li>Bestsellers</li>
+                    <li class="SP_drop">SILFEN Play</li>
+                    <li class="sale_drop">Sale</li>
+                  </ul>
+                </li>
+              </div>
               <li><a class="activeLink" href="about.html">OUR STORY</a></li>
               <li>
                 <a class="dinamicBrand" href="sustainability.html"

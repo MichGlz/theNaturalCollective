@@ -113,6 +113,34 @@ ul.navigation {
   justify-content: space-between;
 }
 
+.navigation ul {
+  display: none;
+}
+
+nav div:hover ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  gap: 10px;
+  margin-left: -30px;
+  font-family: var(--secondaryFont);
+}
+
+.shop_hover_list li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.SP_drop {
+  color: var(--silfenplayGreen);
+}
+
+.sale_drop {
+  color: tomato;
+}
+
 ul.navigation li {
   list-style: none;
   display: inline-block;
@@ -167,12 +195,12 @@ header .menu-btn {
   background-color: var(--silfenBlue);
 }
 
-/* MEDIA QUERIES FOR HEADER */
+/* MEDIA QUERIES FOR HEADER
 @media (max-width: 1300px) {
   ul.navigation {
-    /* width: 60%; */
+    width: 60%; 
   }
-}
+} */
 
 @media (min-width: 1000px) {
   .navigation {

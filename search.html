@@ -7,7 +7,7 @@
     <title>SILFEN</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/search.css" />
-    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <meta name="robots" content="noindex, nofollow" />
   </head>
   <body>
     <div class="pageWrapper">
@@ -25,14 +25,29 @@
           </ul>
         </div>
         <div class="navwrapper">
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"
+            ><span class="nav-icon"></span
+          ></label>
           <div class="logo">
             <a href="index.html"
               ><img src="assets/silfen_logo.svg" alt="logo"
             /></a>
           </div>
-          <nav>
+          <nav class="burgernav">
             <ul class="navigation">
-              <li><a href="shop.html?all=true">SHOP</a></li>
+              <div class="shop_nav">
+                <li>
+                  <a href="shop.html?all=true">SHOP</a>
+                  <ul class="shop_hover_list">
+                    <li>All Products</li>
+                    <li>New Arrivals</li>
+                    <li>Bestsellers</li>
+                    <li class="SP_drop">SILFEN Play</li>
+                    <li class="sale_drop">Sale</li>
+                  </ul>
+                </li>
+              </div>
               <li><a href="about.html">OUR STORY</a></li>
               <li>
                 <a class="dinamicBrand" href="sustainability.html"
@@ -80,6 +95,59 @@
         </div>
       </article>
     </template>
+    <footer>
+      <nav>
+        <img src="assets/blue_silfen_logo.svg" class="footer_logo" />
+
+        <ul>
+          <h4>About</h4>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+        <div class="newsletter">
+          <div class="input-group">
+            <h4>Sign up for our newsletter</h4>
+            <input
+              class="input-group-field"
+              type="email"
+              placeholder="Email address"
+            />
+          </div>
+          <button class="footer_submit"><a href="#">Submit</a></button>
+        </div>
+        <ul>
+          <h4>Conditions</h4>
+          <li><a href="">Terms and conditions</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Returns</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+      </nav>
+      <ul class="footer_social_media">
+        <li>
+          <a target="_blank" href="https://www.instagram.com/silfenstudio/"
+            ><img src="assets/instagram.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.facebook.com/Silfenstudio"
+            ><img src="assets/facebook.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCwUsHwkGR4253v1iySaJJZw"
+            ><img src="assets/youtube.svg" alt=""
+          /></a>
+        </li>
+      </ul>
+      <p>
+        © Copyright | Silfen | Klareboderne 10, 1, DK-1115 København |
+        <strong>Phone:</strong> +45 20 51 89 23 |
+        <strong>Email:</strong> info@silfenstudio.com | CVR. 40912320
+      </p>
+    </footer>
 
     <script src="js/search.js"></script>
   </body>

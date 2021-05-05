@@ -35,6 +35,7 @@ h1 {
   grid-template-areas: "aside main";
   grid-template-columns: 1fr 4fr;
   background-color: rgba(255, 255, 255, 0);
+  min-height: calc(850px + 9rem + 20vh);
 }
 
 /*--------filter-------*/
@@ -101,6 +102,10 @@ aside {
   transition: 0.2s linear;
 }
 
+label[for="sale"]::before {
+  display: none;
+}
+
 input:checked + label {
   background: #7bafd475;
 }
@@ -109,6 +114,7 @@ input[type="radio"]:checked + label::before {
   border: solid 2px black;
   border-radius: 50%;
 }
+
 input[type="checkbox"]:checked + label::before {
   height: 15px;
   width: 15px;
@@ -209,6 +215,10 @@ input {
   letter-spacing: 0.1em;
 }
 
+input[type="email"] {
+  display: inline;
+}
+
 /*--------end filter----------*/
 
 .filterName {
@@ -269,6 +279,32 @@ input {
   text-decoration-line: line-through;
   opacity: 0.5;
   margin-right: 2rem;
+}
+
+.related {
+  color: black;
+  font-family: var(--secondaryFont);
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-left: 9em;
+  padding-top: 4em;
+  letter-spacing: 0.1em;
+}
+
+.sortBy {
+  color: black;
+  font-family: var(--secondaryFont);
+  font-size: 1.2em;
+  text-align: right;
+  font-weight: 300;
+  padding-top: 4em;
+  margin-right: 11.4em;
+  letter-spacing: 0.1em;
+}
+
+.sortBy span {
+  transform: rotate(90deg);
+  font-size: 1.2em;
 }
 
 .youSave {
@@ -584,6 +620,17 @@ div.selected {
   margin-left: 0.3em;
 }
 
+label.menu-icon::before {
+  all: unset;
+  width: 0;
+  display: none;
+}
+label.menu-icon {
+  all: unset;
+  width: 0;
+  display: none;
+}
+
 @media screen and (max-width: 1500px) {
   .main-asideWrapper {
     margin-top: 140px;
@@ -688,6 +735,7 @@ div.selected {
     display: none;
   }
 }
+
 /*-------------path animation----------*/
 /* .locura {
   height: 100vh;

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SILFEN</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/cartInfo.css" />
     <link rel="stylesheet" href="css/appCart.css">
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
   </head>
-  <body class="cartBody">
+  <body class="cartPayBody">
     <header>
       <div class="banner silfen">
         <ul class="banner">
@@ -68,8 +68,28 @@
 <section class="cartStep1">
 <div class="cartStep1wrapper">
   <div class="breadCrombs">
-     <p> <span class="bold">Cart ></span> <span>Information ></span> <span>Payment</span> </p>
+     <p> <span >Cart ></span> <span >Information ></span> <span class="bold">Payment</span> </p>
   </div>
+
+  <div class="wrapperFormCart">
+      
+    <form class="form-personalData"  name="CC"  autocomplete="off">
+      <div class="persona">
+        <h2></h2>
+        <h3></h3>
+        <p></p>
+      </div>
+      <label for="credit_card">Card Number<input id="credit_card" type="text" name="credit_card" autocomplete="off" placeholder="0000 0000 0000 0000"></label>
+      <div class="dateCvv">
+      <label for="expireDate">Expire Date<input id="expDate" type="text" name="expireDate" placeholder="MM/YY"></label>
+      <label for="cvv">CVV<input id="cvv" type="text" name="cvv" placeholder="007"></label>
+    </div>
+      <div class="buttonsWrapper"> 
+        <button class="backBtn"> <a href="cartInfo.html"></a>BACK</button>
+        <button class="nextBtn" type="button">NEXT</button>
+      </div>
+    </form>
+
   <div class="cart-shipping">
     <div class="cart-page">
 
@@ -79,7 +99,7 @@
         <p>Sub Total</p>
         <p class="subtotalP" >0 DKK</p>
       </div>
-      <form class="form-shipping" action="cartInfo.html" >
+      <form class="form-shipping" action="">
         <h2></h2>
         <label for="standard">
           <div>
@@ -97,26 +117,19 @@
           <p>Order will be delivered between 1 - 2 business days</p>
           
         </label>
-      
+      </form>
       <div class="total">
         <p>TOTAL</p>
         <p class="totalP" >0 DKK</p>
       </div>
-      <button class="proceedCheckout" type="submit" >PROCEED TO CHECKOUT</button> 
-    </form>
+      
     </div>
+  </div>
   </div>
 </div>
 </section>
-<section class="cartStep2">
-  
-</section>
-<section class="cartStep3">
-  
-</section>
-<section class="cartStep4">
-  
-</section>
+
+
 
 
     </main>
@@ -163,5 +176,6 @@
 
 
     <script src="js/cart.js"></script>
+    <script src="js/formdata.js"></script>
   </body>
 </html>

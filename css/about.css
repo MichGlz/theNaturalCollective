@@ -31,6 +31,11 @@ a {
   line-height: 2;
 }
 
+.intro_div h1 {
+  font-size: 4rem;
+  color: var(--silfenBlue);
+}
+
 .meet_founders_h2 {
   margin-top: 100px;
   max-width: 9ch;

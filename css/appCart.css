@@ -30,10 +30,10 @@
 
 button {
   cursor: pointer;
-  transition: 0.3s background-color;
+  transition: 0.1s background-color;
 }
 button:hover {
-  background-color: yellowgreen;
+  background-color: rgb(135, 136, 136);
 }
 
 /* hide built-in spin buttons on the number type - https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box */
@@ -50,6 +50,7 @@ input[type="number"] {
 /* END built-in spin hide */
 
 input[type="number"] {
+  border: none;
   display: inline;
   text-align: center;
   width: 30px;

@@ -1,44 +1,13 @@
 let cartItems = Number(localStorage.getItem("cartItems"));
-let sub_total;
-let total_cart;
-const cartItemTemplete = `<template id="cart-item-template">
-<div class="cart-item">
-  <label for="fid-">NAME</label>
-  <div class="plus-minus">
-    <button class="minus" type="button">-</button>
-    <input type="number" name="NAME-" id="fid-" min="0" max="20" />
-    <button class="plus" type="button">+</button>
-  </div>
-  <p class="price-row">DKK<span></span></p>
-  <p class="price-each">DKK<span></span> each</p>
-</div>
-</template>`;
-
-const cartInNav = `
-<a href="search.html"><img src="assets/search.svg" alt="icon" /></a
-            ><a class="cartIcon" href="cart.html"
-              ><img src="assets/cart.svg" alt="icon"
-            /></a>
-<!---start dropdown cart---->
-<div class="cart">
-  <h3>Shopping Cart</h3>
-  <form>
-    <div class="cart-content">
-      <h4>THE CART IS EMPTY</h4>
-    </div>
-    <!-- .END .cart-content-->
-    <button id="checkout-pay" type="button">CHECKOUT & PAY</button>
-  </form>
-</div>
-<!---end dropdown cart---->
-<div class="cartItemsCounter"><p></p></div>`;
-
-document.querySelector("main").innerHTML += cartItemTemplete;
-document.querySelector(".search-cart").innerHTML = cartInNav;
+let cartLenght = localStorage.getItem("basket").length;
+if (cartLenght < 3) {
+  cartItems = 0;
+}
+console.log(cartLenght);
 
 document.querySelector(".cartItemsCounter").classList.add("hideCartCounter");
 
-console.log(localStorage);
+// console.log(localStorage);
 
 const CART = {
   KEY: "basket",
@@ -90,9 +59,7 @@ const CART = {
   },
   updateDOM() {
     const cartcontentEl = document.querySelector(".cart-content");
-    const cartcontentPage = document.querySelector(".cart-page");
     cartcontentEl.innerHTML = "";
-    cartcontentPage.innerHTML = "";
 
     //If we have an empty array / an array with the length of 0
     if (CART.contents.length === 0) {
@@ -102,63 +69,32 @@ const CART = {
         // console.log(element);
 
         const tempItem = document.querySelector("#cart-item-template").content;
-        const tempItem2 = document.querySelector("#cart-item-template-page")
-          .content;
         const itemcopy = tempItem.cloneNode(true);
-        const itemcopy2 = tempItem2.cloneNode(true);
-
         // itemcopy.querySelector("h2").textContent = element.product_name;
         const id = element._id;
         const labelEl = itemcopy.querySelector("label");
-        const labelEl2 = itemcopy2.querySelector("label");
-
         labelEl.textContent = element.product_name;
         labelEl.setAttribute("for", "fid-" + id);
-        labelEl2.textContent = element.product_name;
-        labelEl2.setAttribute("for", "fid-" + id);
 
         const minusBtn = itemcopy.querySelector(".minus");
         minusBtn.addEventListener("click", () => {
           CART.minusOne(id);
-        });
-        const minusBtn2 = itemcopy2.querySelector(".minus");
-        minusBtn2.addEventListener("click", () => {
-          CART.minusOne(id);
-        });
-
-        const deletButton = itemcopy2.querySelector(".deletItem");
-        deletButton.addEventListener("click", () => {
-          CART.deleteProduct(id);
         });
 
         const inputEl = itemcopy.querySelector("input");
         inputEl.id += id;
         inputEl.name += id;
         inputEl.value = element.qty;
-        const inputEl2 = itemcopy2.querySelector("input");
-        inputEl2.id += id;
-        inputEl2.name += id;
-        inputEl2.value = element.qty;
 
         inputEl.addEventListener("input", () => {
           const itemQty = inputEl.valueAsNumber;
           element.qty = itemQty;
           /*  console.log("element");
-            console.log(element); */
-          CART.update(element);
-        });
-        inputEl2.addEventListener("input", () => {
-          const itemQty2 = inputEl2.valueAsNumber;
-          element.qty = itemQty2;
-          /*  console.log("element");
-              console.log(element); */
+          console.log(element); */
           CART.update(element);
         });
 
         inputEl.addEventListener("focus", (e) => {
-          e.target.select();
-        });
-        inputEl2.addEventListener("focus", (e) => {
           e.target.select();
         });
 
@@ -166,12 +102,8 @@ const CART = {
         plusBtn.addEventListener("click", () => {
           CART.plusOne(id);
         });
-        const plusBtn2 = itemcopy2.querySelector(".plus");
-        plusBtn2.addEventListener("click", () => {
-          CART.plusOne(id);
-        });
 
-        const priceEl = itemcopy.querySelector(".price-row span");
+        const priceEl = itemcopy.querySelector(".price-each span");
         priceEl.textContent = Number(element.price) * Number(element.qty);
         if (element.sale) {
           priceEl.textContent = Math.floor(
@@ -180,36 +112,11 @@ const CART = {
               Number(element.qty)
           );
         }
-        const priceEleach = itemcopy.querySelector(".price-each span");
-        priceEleach.textContent = Number(element.price);
-        if (element.sale) {
-          priceEleach.textContent = Math.floor(
-            Number(element.price) * (1 - Number(element.discount) / 100)
-          );
-        }
-
-        const priceEl2 = itemcopy2.querySelector(".price-row span");
-        priceEl2.textContent = Number(element.price) * Number(element.qty);
-        if (element.sale) {
-          priceEl2.textContent = Math.floor(
-            Number(element.price) *
-              (1 - Number(element.discount) / 100) *
-              Number(element.qty)
-          );
-        }
-
-        itemcopy2.querySelector("img").src = element.image_url;
-        itemcopy2.querySelector("img").alt = element.product_name;
-        itemcopy2.querySelector("img").setAttribute("width", "100%");
 
         cartcontentEl.appendChild(itemcopy);
-        cartcontentPage.appendChild(itemcopy2);
-
-        subtotal();
       });
     }
     logCartCounting();
-
     /*----countin items in cart---*/
     // document
     //   .querySelectorAll(`.cart form input[type="number"]`)
@@ -248,23 +155,12 @@ const CART = {
     } else {
       //we'll have to read the data from the input field
       /* const inputEl = document.querySelector("#fid-" + obj._id);
-      CART.contents[index].qty = inputEl.valueAsNumber; */
+    CART.contents[index].qty = inputEl.valueAsNumber; */
       CART.contents[index].qty = obj.qty;
     }
 
     CART.sync();
   },
-
-  deleteProduct(id) {
-    const indexObj = CART.contents.find((element) => element._id == id);
-    cartItems = cartItems - indexObj.qty;
-    indexObj.qty = indexObj.qty - indexObj.qty;
-    console.log(indexObj);
-    CART.update(indexObj);
-
-    logCartCounting();
-  },
-
   minusOne(id) {
     const indexObj = CART.contents.find((element) => element._id == id);
     indexObj.qty--;
@@ -282,7 +178,7 @@ const CART = {
     logCartCounting();
   },
 };
-console.log(localStorage.getItem("basket"));
+// console.log(localStorage.getItem("basket"));
 CART.init();
 
 function logCartCounting() {
@@ -298,23 +194,4 @@ function logCartCounting() {
       .querySelector(".cartItemsCounter")
       .classList.remove("hideCartCounter");
   }
-}
-
-function subtotal() {
-  let x = 0;
-  let subTotal = document.querySelectorAll(".cart-page .price-row span");
-  subTotal.forEach((dkk) => {
-    x = x + Number(dkk.textContent);
-    console.log(x);
-  });
-  if (subTotal.length < 1) {
-    x = 0;
-  }
-  document.querySelector(".subtotalP").textContent = `${x} DKK`;
-  document.querySelector(".totalP").textContent = `${x} DKK`;
-  sub_total = x;
-  document.querySelector(".form-shipping").addEventListener("change", (e) => {
-    total_cart = sub_total + Number(e.target.value);
-    document.querySelector(".totalP").textContent = `${total_cart} DKK`;
-  });
 }

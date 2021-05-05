@@ -30,14 +30,29 @@
           </ul>
         </div>
         <div class="navwrapper">
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"
+            ><span class="nav-icon"></span
+          ></label>
           <div class="logo">
             <a href="index.html"
               ><img src="assets/silfen_logo.svg" alt="logo"
             /></a>
           </div>
-          <nav>
+          <nav class="burgernav">
             <ul class="navigation">
-              <li><a class="activeLink" href="shop.html?all=true">SHOP</a></li>
+              <div class="shop_nav">
+                <li>
+                  <a class="activeLink" href="shop.html?all=true">SHOP</a>
+                  <ul class="shop_hover_list">
+                    <li>All Products</li>
+                    <li>New Arrivals</li>
+                    <li>Bestsellers</li>
+                    <li class="SP_drop">SILFEN Play</li>
+                    <li class="sale_drop">Sale</li>
+                  </ul>
+                </li>
+              </div>
               <li><a href="about.html">OUR STORY</a></li>
               <li>
                 <a class="dinamicBrand" href="sustainability.html"
@@ -208,6 +223,14 @@
                     value="Recycled"
                   />
                   <label for="recycled">RECYCLED</label>
+
+                  <input
+                    type="checkbox"
+                    name="collection"
+                    id="sale"
+                    value="Sale"
+                  />
+                  <label for="sale"></label>
                 </form>
               </div>
             </div>
@@ -216,6 +239,9 @@
 
         <main>
           <h1 class="filterName">SHOP</h1>
+          <div class="sortBy">
+            <p>SORT BY <span>&darr;</span></p>
+          </div>
           <div class="productListContainer"></div>
         </main>
       </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SILFEN</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/cartInfo.css" />
     <link rel="stylesheet" href="css/appCart.css">
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
   </head>
@@ -68,8 +68,24 @@
 <section class="cartStep1">
 <div class="cartStep1wrapper">
   <div class="breadCrombs">
-     <p> <span class="bold">Cart ></span> <span>Information ></span> <span>Payment</span> </p>
+     <p> <span >Cart ></span> <span class="bold">Information ></span> <span>Payment</span> </p>
   </div>
+
+  <div class="wrapperFormCart">
+
+    <form class="form-personalData" name="personalData" method="GET" action="cartPay.html">
+      <label for="name">Name<input id="name" type="text" name="name"></label>
+      <label for="email">Email<input id=email type="email" name="email"></label>
+      <label for="street">Street<input id="street" type="text" name="street"></label>
+      <label for="city">City<input id="city" type="text" name="city"></label>
+      <label for="zipcode">Zip Code<input id="zipcode" type="text" name="zipcode"></label>
+      <label for="country">Country<input id="country" type="text" name="country"></label>
+      <div class="buttonsWrapper"> 
+        <button class="backBtn">BACK</button>
+        <button class="nextBtn" type="submit">NEXT</button>
+      </div>
+    </form>
+
   <div class="cart-shipping">
     <div class="cart-page">
 
@@ -79,7 +95,7 @@
         <p>Sub Total</p>
         <p class="subtotalP" >0 DKK</p>
       </div>
-      <form class="form-shipping" action="cartInfo.html" >
+      <form class="form-shipping" action="">
         <h2></h2>
         <label for="standard">
           <div>
@@ -97,20 +113,32 @@
           <p>Order will be delivered between 1 - 2 business days</p>
           
         </label>
-      
+      </form>
       <div class="total">
         <p>TOTAL</p>
         <p class="totalP" >0 DKK</p>
       </div>
-      <button class="proceedCheckout" type="submit" >PROCEED TO CHECKOUT</button> 
-    </form>
+      
     </div>
+  </div>
   </div>
 </div>
 </section>
-<section class="cartStep2">
-  
-</section>
+<!-- <section class="cartStep2">
+  <form class="form-personalData" action="">
+    <label for="">Name<input type="text"></label>
+    <label for="">Email<input type="email"></label>
+    <label for="">Street<input type="text"></label>
+    <label for="">City<input type="text"></label>
+    <label for="">Zip Code<input type="text"></label>
+    <label for="">Country<input type="text"></label>
+    <div class="buttonsWrapper"> 
+      <button>BACK</button>
+      <button>NEXT</button>
+    </div>
+
+  </form>
+</section> -->
 <section class="cartStep3">
   
 </section>

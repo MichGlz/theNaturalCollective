@@ -19,10 +19,9 @@ main {
 section {
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 50%;
   min-width: 360px;
   min-height: 40vh;
-  /* background-color: lawngreen; */
 }
 
 .cart-shipping button {
@@ -65,7 +64,7 @@ section + section {
 
 .shipping,
 .cart-page {
-  width: 50%;
+  width: 100%;
   min-width: 350px;
 }
 
@@ -171,11 +170,13 @@ section + section {
 }
 
 .form-personalData {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 1.5rem;
+  padding: 2rem;
+  min-width: 350px;
 }
 .form-personalData label {
   display: flex;
@@ -189,7 +190,7 @@ section + section {
   padding: 0.5rem 1rem;
   border: solid 1px var(--silfenBlue);
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .buttonsWrapper {
@@ -199,9 +200,74 @@ section + section {
 }
 
 .form-personalData button {
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
+
+  border: solid 1px black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nextBtn {
   background-color: black;
   color: white;
-  border: none;
-  border-radius: 5px;
+  transition: 0.2s;
+}
+.backBtn {
+  color: black;
+  background-color: white;
+  position: relative;
+}
+
+.wrapperFormCart {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cart-shipping {
+  width: 50%;
+}
+
+.backBtn a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.cartPayBody .form-personalData .dateCvv {
+  display: flex;
+  justify-content: space-between;
+}
+.cartPayBody .form-personalData .dateCvv input {
+  width: 50%;
+}
+
+.persona {
+  width: 100%;
+  font-family: var(--primaryFont);
+  align-items: flex-start;
+}
+
+.cartPayBody .form-personalData {
+  min-height: 600px;
+  justify-content: space-around;
+  padding-bottom: 3rem;
+}
+
+.greyFilter {
+  filter: grayscale(1);
+}
+
+.green {
+  background-color: green;
+  transform: scale(1.2);
+}
+
+.green:hover {
+  background-color: rgb(4, 104, 4);
+  transform: scale(1.3);
 }
