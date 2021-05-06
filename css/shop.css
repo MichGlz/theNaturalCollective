@@ -47,11 +47,17 @@ h1 {
 /*--------filter-------*/
 aside {
   grid-area: aside;
-  height: 90vh;
+  height: 100%;
+  min-height: 90vh;
   width: 350px;
-  padding: 2rem 0 2rem 2rem;
-  margin-top: 6em;
+  padding-left: 2rem;
+  padding-top: 150px;
 }
+
+/* .filter {
+  position: sticky;
+  top: 0px;
+} */
 
 .filter > div {
   border-bottom: solid 2px black;
@@ -652,20 +658,7 @@ label.menu-icon {
   .shop .productListContainer {
     width: max(60vw, 300px);
   }
-  /* aside {
-    width: 0%;
-    height: inherit;
-    padding: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 150px;
-    left: 0;
-    z-index: 2;
-    background-color: white;
-    background-image: url(assets/silfen_s_frame.svg);
-    background-size: 100px;
-    background-attachment: fixed;
-  } */
+
   div.filter {
     padding: 1rem;
   }
@@ -744,6 +737,21 @@ label.menu-icon {
   .btnBack {
     all: unset;
     display: none;
+  }
+
+  aside {
+    width: 0%;
+    height: inherit;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    background-image: url(assets/silfen_s_frame.svg);
+    background-size: 100px;
+    background-attachment: fixed;
   }
 }
 
