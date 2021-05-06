@@ -98,3 +98,8 @@ input[type="number"] {
 .hideCartCounter {
   opacity: 0;
 }
+
+.silfenplayHeader .minus,
+.silfenplayHeader .plus {
+  padding: 0;
+}
