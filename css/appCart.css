@@ -74,6 +74,7 @@ input[type="number"] {
   background-color: #7bafd4;
   color: white;
   font-size: 1.2rem;
+  padding: 0;
 }
 .plus-minus {
   display: flex;
@@ -102,4 +103,25 @@ input[type="number"] {
 .silfenplayHeader .minus,
 .silfenplayHeader .plus {
   padding: 0;
+}
+
+.shop .cart label::before {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.shop .cart label {
+  letter-spacing: normal;
+  margin-left: 0;
+  padding: 0;
+}
+
+.sustain .cart p {
+  margin-top: 0;
+  text-align: left;
+}
+
+.cartItemsCounter p {
+  margin-top: 0;
 }
