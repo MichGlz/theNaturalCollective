@@ -32,8 +32,6 @@ const cartInNav = `
 </div>
 <!---end dropdown cart---->
 <div class="cartItemsCounter"><p></p></div>`;
-document.querySelector("head").innerHTML +=
-  '<link rel="stylesheet" href="css/appCart.css" type="text/css"/>';
 
 document.querySelector("main").innerHTML += cartItemTemplete;
 document.querySelector(".search-cart").innerHTML = cartInNav;
