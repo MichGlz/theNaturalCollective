@@ -201,6 +201,12 @@ header .menu-btn {
   background-color: var(--silfenBlue);
 }
 
+.silfenPlay .banner.silfen {
+  background-color: var(--silfenplayGreen);
+  text-shadow: 0px 0px 5px black;
+  font-weight: bold;
+}
+
 /* MEDIA QUERIES FOR HEADER
 @media (max-width: 1300px) {
   ul.navigation {
