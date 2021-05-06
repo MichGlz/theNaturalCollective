@@ -105,6 +105,11 @@ function showProductList(products) {
       copy.querySelector(".recycledIcon").classList.add("visible");
     }
     copy.querySelector("a").href = `product.html?product=${product._id}`;
+    if (product.silfen_play) {
+      copy.querySelector(
+        "a"
+      ).href = `product.html?product=${product._id}&collection=Silfenplay`;
+    }
 
     copy.querySelector("img").src = product.image_url;
     copy.querySelector("img").alt = product.product_name;

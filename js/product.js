@@ -1,8 +1,14 @@
 const urlParams = new URLSearchParams(window.location.search);
 
 const idProduct = urlParams.get("product");
+const silfenPlay = urlParams.get("collection");
 
 var productInfo;
+
+if (silfenPlay) {
+  document.querySelector("body").classList.add("silfenPlay");
+  document.querySelector(".logo img").src = "assets/silfenplayLogo.svg";
+}
 
 window.addEventListener("load", fetchProduct);
 
